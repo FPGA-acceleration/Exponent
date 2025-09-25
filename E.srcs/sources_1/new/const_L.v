@@ -20,89 +20,38 @@
 //   - Subnormal handling currently collapses to zero; extend if finer behaviour is required.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-module const_L_shift_bank #(
-    parameter integer DATA_WIDTH = 16
-)(
-    input  wire [DATA_WIDTH-1:0] data,
-    output reg  [DATA_WIDTH-1:0] shr_1,
-    output reg  [DATA_WIDTH-1:0] shr_4,
-    output reg  [DATA_WIDTH-1:0] shr_8,
-    output reg  [DATA_WIDTH-1:0] shr_10,
-    output reg  [DATA_WIDTH-1:0] shr_12
-);
-
-    localparam integer EXP_MSB       = 14;
-    localparam integer EXP_LSB       = 7;
-    localparam integer EXP_WIDTH     = EXP_MSB - EXP_LSB + 1; // 8
-    localparam integer MANT_WIDTH    = DATA_WIDTH - EXP_WIDTH - 1; // 7
-    localparam integer SHIFT_WIDTH   = 5;
-    localparam [EXP_WIDTH-1:0] EXP_INF = {EXP_WIDTH{1'b1}};
-
-    function automatic [DATA_WIDTH-1:0] bf16_shift_right;
-        input [DATA_WIDTH-1:0] value;
-        input [SHIFT_WIDTH-1:0] shift_amt;
-        reg                     sign;
-        reg [EXP_WIDTH-1:0]     exponent;
-        reg [MANT_WIDTH-1:0]    mantissa;
-        reg [EXP_WIDTH:0]       exponent_ext;
-        reg [EXP_WIDTH:0]       shift_ext;
-        reg [EXP_WIDTH:0]       exp_result;
-    begin
-        sign      = value[DATA_WIDTH-1];
-        exponent  = value[EXP_MSB:EXP_LSB];
-        mantissa  = value[MANT_WIDTH-1:0];
-        exponent_ext = {1'b0, exponent};
-        shift_ext    = {{(EXP_WIDTH+1-SHIFT_WIDTH){1'b0}}, shift_amt};
-
-        if (exponent == {EXP_WIDTH{1'b0}}) begin
-            // Zero or subnormal values stay at zero in this simplified handling.
-            bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};
-        end else if (exponent == EXP_INF) begin
-            // Preserve Inf/NaN encodings.
-            bf16_shift_right = value;
-        end else if (shift_ext >= exponent_ext) begin
-            // Underflow to (signed) zero if exponent would drop below 1.
-            bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};
-        end else begin
-            exp_result = exponent_ext - shift_ext;
-            if (exp_result < {{EXP_WIDTH{1'b0}}, 1'b1}) begin
-                bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};
-            end else begin
-                bf16_shift_right = {sign, exp_result[EXP_WIDTH-1:0], mantissa};
-            end
-        end
-    end
-    endfunction
-
-    always @* begin
-        shr_1  = bf16_shift_right(data, 5'd1);
-        shr_4  = bf16_shift_right(data, 5'd4);
-        shr_8  = bf16_shift_right(data, 5'd8);
-        shr_10 = bf16_shift_right(data, 5'd10);
-        shr_12 = bf16_shift_right(data, 5'd12);
-    end
-endmodule
-
+//log2e = 20 + 2-1 -ï¼?2-4ï¼?+ 2-8 + 2-10 + 2-12 + 2-14
+//ln2 = ï¼?2-1ï¼? +ï¼?2-3ï¼?+ï¼?2-4ï¼?+ï¼?2-8ï¼?+ï¼?2-10ï¼?+ï¼?2-11ï¼?+ï¼?2-12ï¼?
 module const_L (
     input  wire [15:0] data,
-    output wire [15:0] shr_1,
-    output wire [15:0] shr_4,
-    output wire [15:0] shr_8,
-    output wire [15:0] shr_10,
-    output wire [15:0] shr_12
+    input  wire  clk,
+    input wire flag, // 0 for ln2, 1 for log2e
+    output wire [15:0] result
 );
+    wire   [15:0] shr_0;
+    wire   [15:0] shr_1;
+    wire   [15:0] shr_3;
+    wire   [15:0] shr_4;
+    wire   [15:0] shr_8;
+    wire   [15:0] shr_10;
+    wire   [15:0] shr_11;
+    wire   [15:0] shr_12;
+    wire   [15:0] shr_14;
 
-const_L_shift_bank #(
-    .DATA_WIDTH(16)
-) shared_shift_bank (
-    .data  (data),
-    .shr_1 (shr_1),
-    .shr_4 (shr_4),
-    .shr_8 (shr_8),
-    .shr_10(shr_10),
-    .shr_12(shr_12)
-);
+    const_L_shift_bank #(
+        .DATA_WIDTH(16)
+    ) shared_shift_bank (
+        .data  (data),
+        .shr_0 (shr_0),
+        .shr_1 (shr_1),
+        .shr_3 (shr_3),
+        .shr_4 (shr_4),
+        .shr_8 (shr_8),
+        .shr_10(shr_10),
+        .shr_11(shr_11),
+        .shr_12(shr_12),
+        .shr_14(shr_14)
+    );
 
 endmodule
 
