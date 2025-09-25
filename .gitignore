@@ -1,0 +1,34 @@
+# Vivado auto-generated directories
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+
+# Simulation / temporary files
+*.jou
+*.log
+*.str
+*.wdb
+*.pb
+*.dmp
+*.backup*
+*.tmp
+
+# Checkpoint and lock files
+*.Xil/
+*.data/
+*.bit
+*.bin
+*.mmi
+*.ltx
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Optional: ignore waveform and database files
+*.vcd
+*.wcfg
+*.wdb
