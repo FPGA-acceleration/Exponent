@@ -44,7 +44,7 @@ module const_L_shift_bank #(
 
     function automatic [DATA_WIDTH-1:0] bf16_shift_right;
         input [DATA_WIDTH-1:0] value;
-        input [SHIFT_WIDTH-1:0] shift_amt; //�?多右�?16位，5位二进制足够表示
+        input [SHIFT_WIDTH-1:0] shift_amt; //�?多右�?16位，5位二进制足够表示
         reg                     sign;
         reg [EXP_WIDTH-1:0]     exponent;
         reg [MANT_WIDTH-1:0]    mantissa;
@@ -52,42 +52,42 @@ module const_L_shift_bank #(
         reg [EXP_WIDTH:0]       shift_ext;
         reg [EXP_WIDTH:0]       exp_result;
     begin
-        sign      = value[DATA_WIDTH-1];//符号�?
-        exponent  = value[EXP_MSB:EXP_LSB];//指数�?
-        mantissa  = value[MANT_WIDTH-1:0];//尾数�?
-        exponent_ext = {1'b0, exponent};//拓展指数�?
-        shift_ext    = {{(EXP_WIDTH+1-SHIFT_WIDTH){1'b0}}, shift_amt};//8+1-5=4�?
+        sign      = value[DATA_WIDTH-1];//符号�?
+        exponent  = value[EXP_MSB:EXP_LSB];//指数�?
+        mantissa  = value[MANT_WIDTH-1:0];//尾数�?
+        exponent_ext = {1'b0, exponent};//拓展指数�?
+        shift_ext    = {{(EXP_WIDTH+1-SHIFT_WIDTH){1'b0}}, shift_amt};//8+1-5=4�?
 
         if (exponent == {EXP_WIDTH{1'b0}}) begin
             // Zero or subnormal values stay at zero in this simplified handling.
-            bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};//保持符号位，指数和尾数全�?0
+            bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};//保持符号位，指数和尾数全�?0
         end else if (exponent == EXP_INF) begin
             // Preserve Inf/NaN encodings.
             bf16_shift_right = value;//保持不变
         end else if (shift_ext >= exponent_ext) begin//移位大于等于指数
             // Underflow to (signed) zero if exponent would drop below 1.
-            bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};//保持符号位，指数和尾数全�?0 
+            bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};//保持符号位，指数和尾数全�?0 
         end else begin//正常情况
-            exp_result = exponent_ext - shift_ext;//计算新指�?
+            exp_result = exponent_ext - shift_ext;//计算新指�?
             if (exp_result < {{EXP_WIDTH{1'b0}}, 1'b1}) begin
-                bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};//保持符号位，指数和尾数全�?0
+                bf16_shift_right = {sign, {(DATA_WIDTH-1){1'b0}}};//保持符号位，指数和尾数全�?0
             end else begin//正常移位结果
                 bf16_shift_right = {sign, exp_result[EXP_WIDTH-1:0], mantissa};
             end
         end
     end
     endfunction
-
+//主频下的组合逻辑
     always @* begin
-        shr_0  = data; 
-        shr_1  = bf16_shift_right(data, 5'd1);
-        shr_3  = bf16_shift_right(data, 5'd3);
-        shr_4  = bf16_shift_right(data, 5'd4);
-        shr_8  = bf16_shift_right(data, 5'd8);
-        shr_10 = bf16_shift_right(data, 5'd10);
-        shr_11 = bf16_shift_right(data, 5'd11);
-        shr_12 = bf16_shift_right(data, 5'd12);
-        shr_14 = bf16_shift_right(data, 5'd14);
+            shr_0  = data; 
+            shr_1  = bf16_shift_right(data, 5'd1);
+            shr_3  = bf16_shift_right(data, 5'd3);
+            shr_4  = bf16_shift_right(data, 5'd4);
+            shr_8  = bf16_shift_right(data, 5'd8);
+            shr_10 = bf16_shift_right(data, 5'd10);
+            shr_11 = bf16_shift_right(data, 5'd11);
+            shr_12 = bf16_shift_right(data, 5'd12);
+            shr_14 = bf16_shift_right(data, 5'd14);
     end
 
 endmodule

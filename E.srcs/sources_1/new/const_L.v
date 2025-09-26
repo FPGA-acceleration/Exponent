@@ -20,13 +20,15 @@
 //   - Subnormal handling currently collapses to zero; extend if finer behaviour is required.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-//log2e = 20 + 2-1 -ï¼?2-4ï¼?+ 2-8 + 2-10 + 2-12 + 2-14
-//ln2 = ï¼?2-1ï¼? +ï¼?2-3ï¼?+ï¼?2-4ï¼?+ï¼?2-8ï¼?+ï¼?2-10ï¼?+ï¼?2-11ï¼?+ï¼?2-12ï¼?
+//log2e = 20 + 2-1 -???2-4???+ 2-8 + 2-10 + 2-12 + 2-14
+//ln2 = ???2-1??? +???2-3???+???2-4???+???2-8???+???2-10???+???2-11???+???2-12???
 module const_L (
     input  wire [15:0] data,
-    input  wire  clk,
-    input wire flag, // 0 for ln2, 1 for log2e
-    output wire [15:0] result
+    input  wire        clk,
+    input  wire        rstn,
+    input  wire        flag, // 0 for ln2, 1 for log2e
+    output wire [15:0] result,
+    output wire        valid
 );
     wire   [15:0] shr_0;
     wire   [15:0] shr_1;
@@ -51,6 +53,23 @@ module const_L (
         .shr_11(shr_11),
         .shr_12(shr_12),
         .shr_14(shr_14)
+    );
+    
+    const_L_add_tree u_add_tree (
+        .clk         (clk),
+        .rstn        (rstn),
+        .flag        (flag),
+        .shr_0       (shr_0),
+        .shr_1       (shr_1),
+        .shr_3       (shr_3),
+        .shr_4       (shr_4),
+        .shr_8       (shr_8),
+        .shr_10      (shr_10),
+        .shr_11      (shr_11),
+        .shr_12      (shr_12),
+        .shr_14      (shr_14),
+        .result      (result),
+        .result_valid (valid)
     );
 
 endmodule
