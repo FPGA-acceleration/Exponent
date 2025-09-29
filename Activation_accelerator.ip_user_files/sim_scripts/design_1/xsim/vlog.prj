@@ -1,0 +1,10 @@
+verilog xil_defaultlib  \
+"../../../bd/design_1/ip/design_1_bf16_2_fp32_0_0/sim/design_1_bf16_2_fp32_0_0.v" \
+"../../../bd/design_1/ip/design_1_shift_0_0/sim/design_1_shift_0_0.v" \
+"../../../bd/design_1/ip/design_1_adder_0_0/sim/design_1_adder_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
