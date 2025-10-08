@@ -6,9 +6,9 @@ vlib modelsim_lib/msim/xil_defaultlib
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 
 vlog -work xil_defaultlib -64 -incr -mfcu  \
-"../../../bd/design_1/ip/design_1_bf16_2_fp32_0_0/sim/design_1_bf16_2_fp32_0_0.v" \
-"../../../bd/design_1/ip/design_1_shift_0_0/sim/design_1_shift_0_0.v" \
-"../../../bd/design_1/ip/design_1_adder_0_0/sim/design_1_adder_0_0.v" \
+"../../../bd/design_1/ip/design_1_multiple_log2e_0_0/sim/design_1_multiple_log2e_0_0.v" \
+"../../../bd/design_1/ip/design_1_get_u_v_0_0/sim/design_1_get_u_v_0_0.v" \
+"../../../bd/design_1/ip/design_1_exp_from_uv_0_0/sim/design_1_exp_from_uv_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 

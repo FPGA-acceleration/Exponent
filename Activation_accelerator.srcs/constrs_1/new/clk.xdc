@@ -1,1 +1,1 @@
-create_clock -name sys_clk -period 10.000 [get_ports aclk]
+create_clock -name aclk -period 2.000 [get_ports aclk]

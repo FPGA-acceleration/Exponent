@@ -1,44 +1,18 @@
 # do {block_tb_simulate.do}
 # vsim -voptargs=""+acc"" -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -lib xil_defaultlib xil_defaultlib.block_tb xil_defaultlib.glbl 
-# Start time: 17:22:56 on Sep 29,2025
+# Start time: 16:59:21 on Oct 08,2025
 # Loading xil_defaultlib.block_tb
 # Loading xil_defaultlib.design_1_wrapper
 # Loading xil_defaultlib.design_1
-# Loading xil_defaultlib.design_1_adder_0_0
-# Loading xil_defaultlib.adder
-# Loading xil_defaultlib.design_1_bf16_2_fp32_0_0
-# Loading xil_defaultlib.bf16_2_fp32
-# Loading xil_defaultlib.design_1_shift_0_0
-# Loading xil_defaultlib.shift
+# Loading xil_defaultlib.design_1_exp_from_uv_0_0
+# Loading xil_defaultlib.exp_from_uv
+# Loading xil_defaultlib.design_1_get_u_v_0_0
+# Loading xil_defaultlib.get_u_v
+# Loading xil_defaultlib.design_1_multiple_log2e_0_0
+# Loading xil_defaultlib.multiple_log2e
 # Loading xil_defaultlib.glbl
 # 1
 # 1
-# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
-# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
-# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
-# Cannot lock WLF file: "vsim.wlf"
-#           errno 11: Resource temporarily unavailable.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: anderson  Hostname: Legion  ProcessID: 10237
-#           Attempting to use alternate WLF file "./wlftA6Kj4w".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftA6Kj4w
-# TB: Simulation Started.
-# TB: Reset Released.
-# TB: Master interface is ready to receive data.
-# [75000] TB: Received data = 0x3f800000
-# [105000] TB: Received data = 0xc0000000
-# [135000] TB: Received data = 0x3f000000
-# [165000] TB: Received data = 0x0000b504
-# [295000] TB: Received data = 0x00000000
-# [325000] TB: Received data = 0x80000000
-# [405000] TB: Received data = 0x7f800000
-# [435000] TB: Received data = 0xff800000
-# [545000] TB: Received data = 0x7fc00000
-# [575000] TB: Received data = 0x7fa00000
-# [605000] TB: Received data = 0xffc10000
-# TB: All stimulus sent. Finishing simulation.
-# 
-# <EOF>
-# End time: 17:23:02 on Sep 29,2025, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 2
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
