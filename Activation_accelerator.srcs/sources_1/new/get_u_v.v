@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -33,15 +32,15 @@ module get_u_v(
     input M_AXIS_TREADY
     );
 
-    reg [19:0] s_axis_tdata;
+    reg [18:0] s_axis_tdata;
 
     always @(posedge aclk or negedge arstn) begin
         if(!arstn) begin
-            s_axis_tdata <= 20'b0;
+            s_axis_tdata <= 19'b0;
         end
 
         else if(S_AXIS_TREADY & S_AXIS_TVALID)begin
-            s_axis_tdata <= S_AXIS_TDATA[19:0];
+            s_axis_tdata <= S_AXIS_TDATA[18:0];
         end
 
         else begin
@@ -60,8 +59,12 @@ module get_u_v(
             m_axis_tvalid <= 1'b1;
         end
 
-        else begin
+        else if(M_AXIS_TREADY & M_AXIS_TVALID)begin
             m_axis_tvalid <= 1'b0;
+        end
+
+        else begin
+            m_axis_tvalid <= m_axis_tvalid;
         end
     end
 
@@ -69,11 +72,11 @@ module get_u_v(
 
     wire sign;
     wire [7:0] exp;
-    wire [10:0] fixed;//4:7
+    wire [9:0] fixed;//3:7
 
-    assign sign = s_axis_tdata[19];
-    assign exp = s_axis_tdata[18-:8];
-    assign fixed = s_axis_tdata[0+:11];
+    assign sign = s_axis_tdata[18];
+    assign exp = s_axis_tdata[17-:8];
+    assign fixed = s_axis_tdata[0+:10];
 
 
     //caculate tht int
@@ -86,11 +89,11 @@ module get_u_v(
     wire [2:0] shift_amount_modified_int;
     assign shift_amount_modified_int = (shift_amount_int > 8'd7) ?  3'd7 : shift_amount_int[2:0];
 
-    wire [17:0] shift_result_int;
+    wire [16:0] shift_result_int;
     assign shift_result_int = (shift_diract_int == 1'b1) ? ({7'b0, fixed} >> shift_amount_modified_int) : ({7'b0, fixed} << shift_amount_modified_int);
 
     wire [7:0] int_value;
-    assign int_value = (shift_result_int[17-:11] >= 11'd127) ? 8'hFF : shift_result_int[14:7];
+    assign int_value = (shift_result_int[16-:10] >= 11'd127) ? 8'hFF : shift_result_int[14:7];
 
 
     //caculate the bf16
@@ -103,7 +106,7 @@ module get_u_v(
     wire [2:0] shift_amount_modified_bf16;
     assign shift_amount_modified_bf16 = (shift_amount_bf16 > 8'd7) ?  3'd7 : shift_amount_bf16[2:0];
 
-    wire [17:0] shift_result_bf16;
+    wire [16:0] shift_result_bf16;
     assign shift_result_bf16 = (shift_diract_bf16 == 1'b1) ? ({fixed ,7'b0} >> shift_amount_modified_bf16) : ({fixed, 7'b0} << shift_amount_modified_bf16);
 
     // wire [16:0] frac_value;
@@ -114,7 +117,7 @@ module get_u_v(
 
     assign M_AXIS_TDATA = (frac_value[7:0] == 8'b0 || int_value == 8'hFF) ? {int_value, frac_value} : {int_value+1'b1, frac_value};
 
-    assign S_AXIS_TREADY = !m_axis_tvalid || (M_AXIS_TREADY & M_AXIS_TVALID);
+    assign S_AXIS_TREADY = !m_axis_tvalid || M_AXIS_TREADY;
 
 
 

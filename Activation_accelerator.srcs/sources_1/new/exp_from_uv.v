@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -60,8 +59,12 @@ module exp_from_uv(
             m_axis_tvalid <= 1'b1;
         end
 
-        else begin
+        else if(M_AXIS_TREADY & M_AXIS_TVALID)begin
             m_axis_tvalid <= 1'b0;
+        end
+
+        else begin
+            m_axis_tvalid <= m_axis_tvalid;
         end
     end
 
@@ -84,5 +87,5 @@ module exp_from_uv(
 
     assign M_AXIS_TDATA = {1'b0, exp_result, frac_result};
 
-    assign S_AXIS_TREADY = !m_axis_tvalid || (M_AXIS_TREADY & M_AXIS_TVALID);
+    assign S_AXIS_TREADY = !m_axis_tvalid || M_AXIS_TREADY;
 endmodule
