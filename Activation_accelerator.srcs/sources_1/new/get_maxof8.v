@@ -28,7 +28,7 @@ module get_maxof8(
     input S_AXIS_TVALID,
     output S_AXIS_TREADY,
 
-    output [15:0] M_AXIS_TDATA,
+    output [143:0] M_AXIS_TDATA,
     output M_AXIS_TVALID,
     input M_AXIS_TREADY
     );
@@ -60,8 +60,12 @@ module get_maxof8(
             m_axis_tvalid <= 1'b1;
         end
 
-        else begin
+        else if(M_AXIS_TREADY & M_AXIS_TVALID)begin
             m_axis_tvalid <= 1'b0;
+        end
+
+        else begin
+            m_axis_tvalid <= m_axis_tvalid;
         end
     end
 
@@ -88,9 +92,9 @@ module get_maxof8(
     wire [15:0] max_final = bf16_max(max0_stage_1, max1_stage_1);
 
 
-    assign M_AXIS_TDATA = max_final;
+    assign M_AXIS_TDATA = {s_axis_tdata, max_final};
 
-    assign S_AXIS_TREADY = !m_axis_tvalid || (M_AXIS_TREADY & M_AXIS_TVALID);
+    assign S_AXIS_TREADY = !m_axis_tvalid || M_AXIS_TREADY;
 
 
     function automatic [15:0] bf16_max;

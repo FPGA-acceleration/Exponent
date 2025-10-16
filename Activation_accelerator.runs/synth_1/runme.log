@@ -1,46 +1,59 @@
 
 *** Running vivado
-    with args -log get_maxof8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source get_maxof8.tcl
+    with args -log exp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source exp.tcl
 
 
 ****** Vivado v2024.2 (64-bit)
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Wed Oct  8 17:50:37 2025
+  **** Start of session at: Fri Oct 10 19:47:05 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source get_maxof8.tcl -notrace
+source exp.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top get_maxof8 -part xck26-sfvc784-2LV-c
+Command: synth_design -top exp -part xck26-sfvc784-2LV-c
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 75401
+INFO: [Synth 8-7075] Helper process launched with PID 5692
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2429.293 ; gain = 134.660 ; free physical = 2385 ; free virtual = 14184
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2432.289 ; gain = 137.598 ; free physical = 4891 ; free virtual = 17876
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'get_maxof8' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/get_maxof8.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'get_maxof8' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/get_maxof8.v:23]
+INFO: [Synth 8-6157] synthesizing module 'exp' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp.v:23]
+INFO: [Synth 8-6157] synthesizing module 'multiple_log2e' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'multiple_log2e' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:22]
+INFO: [Synth 8-6157] synthesizing module 'get_u_v' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/get_u_v.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'get_u_v' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/get_u_v.v:22]
+INFO: [Synth 8-6157] synthesizing module 'exp_from_uv' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'exp_from_uv' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'exp' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp.v:23]
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[23] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[22] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[21] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[20] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[19] in module get_u_v is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2501.262 ; gain = 206.629 ; free physical = 2299 ; free virtual = 14099
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2503.258 ; gain = 208.566 ; free physical = 4809 ; free virtual = 17794
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2501.262 ; gain = 206.629 ; free physical = 2308 ; free virtual = 14108
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2509.195 ; gain = 214.504 ; free physical = 4809 ; free virtual = 17794
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2501.262 ; gain = 206.629 ; free physical = 2309 ; free virtual = 14109
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2509.195 ; gain = 214.504 ; free physical = 4809 ; free virtual = 17794
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2501.262 ; gain = 0.000 ; free physical = 2309 ; free virtual = 14109
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2509.195 ; gain = 0.000 ; free physical = 4809 ; free virtual = 17794
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -49,13 +62,15 @@ Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activatio
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/constrs_1/new/clk.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2643.707 ; gain = 0.000 ; free physical = 2321 ; free virtual = 14120
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2664.977 ; gain = 0.000 ; free physical = 4818 ; free virtual = 17804
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2643.707 ; gain = 0.000 ; free physical = 2321 ; free virtual = 14120
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2664.977 ; gain = 0.000 ; free physical = 4818 ; free virtual = 17804
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2643.707 ; gain = 349.074 ; free physical = 2353 ; free virtual = 14153
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2664.977 ; gain = 370.285 ; free physical = 4855 ; free virtual = 17841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -63,46 +78,36 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2651.711 ; gain = 357.078 ; free physical = 2353 ; free virtual = 14153
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2672.980 ; gain = 378.289 ; free physical = 4855 ; free virtual = 17841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2651.711 ; gain = 357.078 ; free physical = 2353 ; free virtual = 14153
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2672.980 ; gain = 378.289 ; free physical = 4855 ; free virtual = 17841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Preparing Guide Design
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2672.980 ; gain = 378.289 ; free physical = 4855 ; free virtual = 17842
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2651.711 ; gain = 357.078 ; free physical = 2355 ; free virtual = 14155
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2651.711 ; gain = 357.078 ; free physical = 2355 ; free virtual = 14155
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2651.711 ; gain = 357.078 ; free physical = 2354 ; free virtual = 14155
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   5 Input   11 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 8     
+	   2 Input    8 Bit       Adders := 48    
 +---Registers : 
-	              128 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	               19 Bit    Registers := 8     
+	               16 Bit    Registers := 16    
+	                1 Bit    Registers := 24    
 +---Muxes : 
-	   2 Input   16 Bit        Muxes := 35    
+	   2 Input   17 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 8     
+	   2 Input   15 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 32    
+	   2 Input    3 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 32    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -119,26 +124,31 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[23] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[22] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[21] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[20] in module get_u_v is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TDATA[19] in module get_u_v is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2651.711 ; gain = 357.078 ; free physical = 2361 ; free virtual = 14166
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2672.980 ; gain = 378.289 ; free physical = 4867 ; free virtual = 17858
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3254.176 ; gain = 959.543 ; free physical = 1841 ; free virtual = 13647
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 3259.023 ; gain = 964.332 ; free physical = 4315 ; free virtual = 17306
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3264.191 ; gain = 969.559 ; free physical = 1834 ; free virtual = 13639
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 3298.047 ; gain = 1003.355 ; free physical = 4274 ; free virtual = 17265
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3272.199 ; gain = 977.566 ; free physical = 1826 ; free virtual = 13631
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 3321.055 ; gain = 1026.363 ; free physical = 4250 ; free virtual = 17241
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -156,37 +166,60 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1695 ; free virtual = 13500
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1695 ; free virtual = 13500
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 1st driver pin 'exp_inst[6].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 2nd driver pin 'exp_inst[4].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 3rd driver pin 'exp_inst[2].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 4th driver pin 'exp_inst[0].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 5th driver pin 'exp_inst[1].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 6th driver pin 'exp_inst[3].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 7th driver pin 'exp_inst[5].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin M_AXIS_TVALID_OBUF with 8th driver pin 'exp_inst[7].exp_from_uv_inst/m_axis_tvalid_reg/Q' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 1st driver pin 'S_AXIS_TREADY_OBUF_inst_i_1/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 2nd driver pin 'S_AXIS_TREADY_OBUF_inst_i_2/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 3rd driver pin 'S_AXIS_TREADY_OBUF_inst_i_3/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 4th driver pin 'S_AXIS_TREADY_OBUF_inst_i_4/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 5th driver pin 'S_AXIS_TREADY_OBUF_inst_i_5/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 6th driver pin 'S_AXIS_TREADY_OBUF_inst_i_6/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 7th driver pin 'S_AXIS_TREADY_OBUF_inst_i_7/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin S_AXIS_TREADY_OBUF with 8th driver pin 'S_AXIS_TREADY_OBUF_inst_i_8/O' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/multiple_log2e.v:106]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        2|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1695 ; free virtual = 13500
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1695 ; free virtual = 13500
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1695 ; free virtual = 13500
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1695 ; free virtual = 13500
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -203,43 +236,44 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY8 |    14|
-|3     |LUT1   |     1|
-|4     |LUT2   |    36|
-|5     |LUT3   |     1|
-|6     |LUT4   |   196|
-|7     |LUT6   |   105|
-|8     |FDCE   |   129|
-|9     |IBUF   |   132|
-|10    |OBUF   |    18|
+|2     |CARRY8 |    16|
+|3     |LUT1   |    17|
+|4     |LUT2   |    73|
+|5     |LUT3   |   168|
+|6     |LUT4   |   232|
+|7     |LUT5   |   296|
+|8     |LUT6   |   520|
+|9     |FDCE   |   416|
+|10    |IBUF   |   124|
+|11    |OBUF   |   130|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1695 ; free virtual = 13500
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3428.012 ; gain = 990.934 ; free physical = 1687 ; free virtual = 13492
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3428.012 ; gain = 1133.379 ; free physical = 1687 ; free virtual = 13492
+Synthesis finished with 0 errors, 16 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 3438.867 ; gain = 988.395 ; free physical = 4154 ; free virtual = 17145
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 3438.867 ; gain = 1144.176 ; free physical = 4154 ; free virtual = 17145
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3428.012 ; gain = 0.000 ; free physical = 1867 ; free virtual = 13673
-INFO: [Netlist 29-17] Analyzing 147 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3438.867 ; gain = 0.000 ; free physical = 4311 ; free virtual = 17302
+INFO: [Netlist 29-17] Analyzing 141 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3428.012 ; gain = 0.000 ; free physical = 1869 ; free virtual = 13674
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3438.867 ; gain = 0.000 ; free physical = 4311 ; free virtual = 17302
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 133 instances were transformed.
+  A total of 125 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  IBUF => IBUF (IBUFCTRL, INBUF): 132 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 124 instances
 
-Synth Design complete | Checksum: b4a8dba
+Synth Design complete | Checksum: 807c6087
 INFO: [Common 17-83] Releasing license: Synthesis
-20 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+29 Infos, 11 Warnings, 16 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 3428.012 ; gain = 1981.191 ; free physical = 1869 ; free virtual = 13674
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2704.354; main = 2541.470; forked = 267.884
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4268.016; main = 3354.184; forked = 924.812
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:33 . Memory (MB): peak = 3438.867 ; gain = 1990.988 ; free physical = 4311 ; free virtual = 17302
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2562.433; main = 2562.433; forked = 268.910
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3707.598; main = 3421.066; forked = 924.812
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3428.012 ; gain = 0.000 ; free physical = 1869 ; free virtual = 13674
-INFO: [Common 17-1381] The checkpoint '/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/get_maxof8.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file get_maxof8_utilization_synth.rpt -pb get_maxof8_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  8 17:51:06 2025...
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3445.074 ; gain = 0.000 ; free physical = 4311 ; free virtual = 17302
+INFO: [Common 17-1381] The checkpoint '/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/exp.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file exp_utilization_synth.rpt -pb exp_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 10 19:47:42 2025...

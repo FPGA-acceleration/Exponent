@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log get_maxof8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source get_maxof8.tcl" );
+         "-log exp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source exp.tcl" );
 
 
 

@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Wed Oct  8 17:35:59 2025
+//Date        : Thu Oct 16 10:41:03 2025
 //Host        : Legion running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -19,19 +19,19 @@ module design_1_wrapper
     S_AXIS_tvalid,
     aclk,
     arstn);
-  output [15:0]M_AXIS_tdata;
+  output [127:0]M_AXIS_tdata;
   input M_AXIS_tready;
   output M_AXIS_tvalid;
-  input [15:0]S_AXIS_tdata;
+  input [127:0]S_AXIS_tdata;
   output S_AXIS_tready;
   input S_AXIS_tvalid;
   input aclk;
   input arstn;
 
-  wire [15:0]M_AXIS_tdata;
+  wire [127:0]M_AXIS_tdata;
   wire M_AXIS_tready;
   wire M_AXIS_tvalid;
-  wire [15:0]S_AXIS_tdata;
+  wire [127:0]S_AXIS_tdata;
   wire S_AXIS_tready;
   wire S_AXIS_tvalid;
   wire aclk;

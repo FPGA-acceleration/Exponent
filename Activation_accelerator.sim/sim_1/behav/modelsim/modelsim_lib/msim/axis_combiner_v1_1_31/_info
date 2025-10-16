@@ -1,0 +1,37 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.sim/sim_1/behav/modelsim
+vaxis_combiner_v1_1_31_top
+!s10a 1760582476
+!s110 1760580898
+!i10b 1
+!s100 ?@mT3:BGiYZ9Be3YW=A^61
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+ICnO_=:LWj;fBa3o8RFI[]1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1760580890
+8../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_combiner_v1_1_vl_rfs.v
+F../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_combiner_v1_1_vl_rfs.v
+F../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_infrastructure_v1_1_1.vh
+!i122 0
+L0 55 479
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1760580898.000000
+!s107 ../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_infrastructure_v1_1_1.vh|../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_combiner_v1_1_vl_rfs.v|
+!s90 -incr|-mfcu|-work|axis_combiner_v1_1_31|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_combiner_v1_1_vl_rfs.v|
+!i113 1
+o-mfcu -work axis_combiner_v1_1_31
+!s92 -mfcu -work axis_combiner_v1_1_31 +incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl
+tCvgOpt 0

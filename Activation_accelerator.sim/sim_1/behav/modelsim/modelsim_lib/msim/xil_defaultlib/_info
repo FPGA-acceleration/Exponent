@@ -2,6 +2,7 @@ m255
 K4
 z2
 !s11f MIXED_VERSIONS
+!s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
@@ -9,145 +10,575 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.sim/sim_1/behav/modelsim
-vblock_tb
-!s10a 1760014619
-!s110 1760014633
+vaxis_broadcaster_0
+Z1 !s10a 1760580234
+Z2 !s110 1760580898
 !i10b 1
-!s100 Do^Cg[CVfaW3=jFWg]HKA2
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IT>l`j6H3Od4dXM2O?BOi;1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 fTi:z2RR]Xa@IQ5R`N8FF1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IJLU=InbQG_YMj=BCWXRTa1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1760014619
-8../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v
-F../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v
-!i122 7
-L0 3 239
-Z3 OV;L;2020.1;71
+Z5 w1760580234
+8../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/sim/axis_broadcaster_0.v
+F../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/sim/axis_broadcaster_0.v
+!i122 4
+L0 56 72
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1760014633.000000
-Z4 !s107 ../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v|../../../../Activation_accelerator.srcs/sources_1/new/get_u_v.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.srcs/sources_1/new/exp.v|
-Z5 !s90 -incr|-mfcu|-work|xil_defaultlib|../../../../Activation_accelerator.srcs/sources_1/new/exp.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.srcs/sources_1/new/get_u_v.v|../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v|../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|
+Z7 !s108 1760580898.000000
+Z8 !s107 ../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_infrastructure_v1_1_1.vh|../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_exp_0_0/sim/design_1_exp_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v|../../../../Activation_accelerator.srcs/sources_1/new/exp.v|../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v|../../../../Activation_accelerator.srcs/sources_1/new/get_u_v.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/sim/axis_broadcaster_0.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/top_axis_broadcaster_0.v|
+Z9 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/top_axis_broadcaster_0.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/sim/axis_broadcaster_0.v|../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.srcs/sources_1/new/get_u_v.v|../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v|../../../../Activation_accelerator.srcs/sources_1/new/exp.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_exp_0_0/sim/design_1_exp_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v|../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v|../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|
 !i113 1
-Z6 o-mfcu -work xil_defaultlib
-Z7 tCvgOpt 0
+Z10 o-mfcu -work xil_defaultlib
+Z11 !s92 -mfcu -work xil_defaultlib +incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl
+Z12 tCvgOpt 0
+vaxis_combiner_0
+!s10a 1760536166
+R2
+!i10b 1
+!s100 g7Bl3Z6hoLINCIAI>W@5Y0
+R3
+I]WEGdfNT5hEj^eIaaO=`M2
+R4
+R0
+w1760536166
+8../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v
+F../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v
+!i122 3
+L0 56 84
+R6
+r1
+!s85 0
+31
+R7
+Z13 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tuser_axis_broadcaster_0.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tdata_axis_broadcaster_0.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v|
+Z14 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tdata_axis_broadcaster_0.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tuser_axis_broadcaster_0.v|
+!i113 1
+R10
+R11
+R12
+vblock_tb
+!s10a 1760581921
+!s110 1760581933
+!i10b 1
+!s100 gG4I0P=@Y9k4ANb8mlCB[0
+R3
+IIS_D`hcKMAchTBU^nkPgQ1
+R4
+R0
+w1760581921
+8../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v
+F../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v
+!i122 10
+L0 3 93
+R6
+r1
+!s85 0
+31
+!s108 1760581933.000000
+R8
+R9
+!i113 1
+R10
+R11
+R12
+Ec_shift_ram_0
+Z15 w1760528269
+Z16 DPx20 c_shift_ram_v12_0_18 29 c_shift_ram_v12_0_18_viv_comp 0 22 d4gd^8@T;X6IYJM:`>LJS1
+Z17 DPx18 xbip_utils_v3_0_14 22 xbip_utils_v3_0_14_pkg 0 22 >db2lGKek?NDk9@dL`zbb1
+DEx20 c_shift_ram_v12_0_18 20 c_shift_ram_v12_0_18 0 22 ;8lN^XLVLKmhK=cVz2?6h2
+Z18 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z19 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z20 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 12
+R0
+Z21 8../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd
+Z22 F../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd
+l0
+L59 1
+VIbIDoI?5Qi8oDA@`;MNVf0
+!s100 VGjT8=Yd`2SkFEIH?<nU^3
+Z23 OV;C;2020.1;71
+31
+Z24 !s110 1760582478
+!i10b 1
+Z25 !s108 1760582478.000000
+Z26 !s90 -93|-work|xil_defaultlib|../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd|
+Z27 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd|
+!i113 1
+Z28 o-93 -work xil_defaultlib
+Z29 tExplicit 1 CvgOpt 0
+Ac_shift_ram_0_arch
+R16
+R17
+R18
+R19
+R20
+DEx4 work 13 c_shift_ram_0 0 22 IbIDoI?5Qi8oDA@`;MNVf0
+!i122 12
+l118
+L67 88
+VG_7R0`<L1[Y1W_7;bbKBk2
+!s100 J^1KDzUA8f:dEK516DT><1
+R23
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R28
+R29
+vdesign_1
+Z30 !s10a 1760582463
+R2
+!i10b 1
+!s100 ^LzXXeVlZ34gfgMojF7nM2
+R3
+I[B[ZW[<aY<HdJLUOkj3_93
+R4
+R0
+Z31 w1760580849
+8../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v
+F../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v
+!i122 4
+L0 14 61
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vdesign_1_exp_0_0
+Z32 !s10a 1760536639
+R2
+!i10b 1
+!s100 kao2B5_V]8MegMJ[]OUAW1
+R3
+IKe@Z;LbWC;<jnHLUoN:h>2
+R4
+R0
+Z33 w1760536639
+8../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_exp_0_0/sim/design_1_exp_0_0.v
+F../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_exp_0_0/sim/design_1_exp_0_0.v
+!i122 4
+L0 57 46
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vdesign_1_max_0_0
+R32
+R2
+!i10b 1
+!s100 gLL;g[8KkU7]8M8YLB=eG0
+R3
+IlD1a;[N?]jCiATE1niQi^1
+R4
+R0
+R33
+8../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v
+F../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v
+!i122 4
+Z34 L0 57 44
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vdesign_1_sub_max_0_0
+R30
+R2
+!i10b 1
+!s100 IC__zN@JPYX;aHCkFEfka1
+R3
+I2[e@g<PTzUUcn>hcQZUE71
+R4
+R0
+R31
+8../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v
+F../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v
+!i122 4
+R34
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vdesign_1_wrapper
+R30
+R2
+!i10b 1
+!s100 1Ofbm`6a6aFSD:gd4SUf82
+R3
+IfQ:Ee<zJWT__S`OEI90m53
+R4
+R0
+R31
+8../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+F../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+!i122 4
+L0 13 37
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
 vexp
 !s10a 1760014278
-!s110 1760014291
+R2
 !i10b 1
 !s100 <]X6mC`;Tn4af6dfR86Ze2
-R1
-Im=4^a>14:ZR`JL[W<dHEa3
-R2
+R3
+I[U9ignIgG=:LFO[>41flZ3
+R4
 R0
 w1760014278
 8../../../../Activation_accelerator.srcs/sources_1/new/exp.v
 F../../../../Activation_accelerator.srcs/sources_1/new/exp.v
-!i122 5
+!i122 4
 L0 23 67
-R3
+R6
 r1
 !s85 0
 31
-!s108 1760014291.000000
-R4
-R5
-!i113 1
-R6
 R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
 vexp_from_uv
-!s10a 1760011865
-!s110 1760013518
+!s10a 1760534324
+R2
 !i10b 1
 !s100 64[fmAGVUSA;F6o<VPiC;1
-R1
-IH?BmTlKi?MJGznRIIFHM^2
-R2
+R3
+I_EnOcZ:7[WeA1m7Bnf0f33
+R4
 R0
-w1760011865
+w1760534324
 8../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v
 F../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v
-!i122 0
+!i122 4
 L0 22 70
-R3
+R6
 r1
 !s85 0
 31
-!s108 1760013518.000000
-R4
-R5
-!i113 1
-R6
 R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vfloating_point_0
+!s10a 1760535089
+R2
+!i10b 1
+!s100 Z7`?c<@]QdnTo?IHF>eUY3
+R3
+IGbA4>kJ11aIfT:I`QQGlS1
+R4
+R0
+w1760535089
+8../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v
+F../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v
+!i122 2
+L0 56 156
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v|
+!s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v|
+!i113 1
+R10
+R11
+R12
+vget_maxof8
+!s10a 1760064640
+Z35 !s110 1760580894
+!i10b 1
+!s100 AF1VVg_LHi>n=P^o4o_`E2
+R3
+Ij^z[Q^1m1ag9zWBRAc<Fe1
+R4
+R0
+w1760064640
+8../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v
+F../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v
+!i122 1
+L0 23 104
+R6
+r1
+!s85 0
+31
+Z36 !s108 1760580894.000000
+Z37 !s107 ../../../../Activation_accelerator.srcs/sources_1/new/max.v|../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v|../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v|
+Z38 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v|../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v|../../../../Activation_accelerator.srcs/sources_1/new/max.v|
+!i113 1
+R10
+R11
+R12
 vget_u_v
-Z8 !s110 1760015644
+!s10a 1760534314
+R2
 !i10b 1
 !s100 eg:F8A2k968M_]8XWZ8C61
-R1
-I7UQYKgX>Rh5m@GM=967h>1
-R2
+R3
+I<WloE7neRoKRYKS:A8eTJ2
+R4
 R0
-w1760015633
+w1760534314
 8../../../../Activation_accelerator.srcs/sources_1/new/get_u_v.v
 F../../../../Activation_accelerator.srcs/sources_1/new/get_u_v.v
-!i122 13
+!i122 4
 L0 22 103
-R3
+R6
 r1
 !s85 0
 31
-Z9 !s108 1760015644.000000
-R4
-R5
-!i113 1
-R6
 R7
-vglbl
 R8
+R9
+!i113 1
+R10
+R11
+R12
+vglbl
+!s110 1760582482
 !i10b 1
 !s100 ZHmTNm_h3dd`6mIQLzSUN3
-R1
+R3
 I4bLzLG4W_XENbhSMOhTRE2
-R2
+R4
 R0
 w1724786425
 8glbl.v
 Fglbl.v
-!i122 14
+!i122 13
 L0 6 78
-R3
+R6
 r1
 !s85 0
 31
-R9
+!s108 1760582482.000000
 !s107 glbl.v|
 !s90 -work|xil_defaultlib|glbl.v|
 !i113 1
 o-work xil_defaultlib
-R7
-vmultiple_log2e
-!s10a 1760015174
-!s110 1760015520
+R12
+vmax
+!s10a 1760534936
+R35
 !i10b 1
-!s100 :4JTI_93TXmLzX1gYiGCF0
-R1
-I35k6edziH_0en;cJk<`Ak2
-R2
-R0
-w1760015174
-8../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v
-F../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v
-!i122 11
-L0 22 89
+!s100 4iClJo3eC6d5Z^I8:3AGo3
 R3
+IeiXmSlBj`G5BM6YVThT`P1
+R4
+R0
+w1760534936
+8../../../../Activation_accelerator.srcs/sources_1/new/max.v
+F../../../../Activation_accelerator.srcs/sources_1/new/max.v
+!i122 1
+L0 23 43
+R6
 r1
 !s85 0
 31
-!s108 1760015520.000000
-R4
-R5
+R36
+R37
+R38
 !i113 1
+R10
+R11
+R12
+vmultiple_log2e
+!s10a 1760534319
+R2
+!i10b 1
+!s100 :4JTI_93TXmLzX1gYiGCF0
+R3
+I_P0mdU7T_G<dda_MTh:iA0
+R4
+R0
+w1760534319
+8../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v
+F../../../../Activation_accelerator.srcs/sources_1/new/multiple_log2e.v
+!i122 4
+L0 22 89
 R6
+r1
+!s85 0
+31
 R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vserial_max
+!s10a 1760534336
+R35
+!i10b 1
+!s100 <Ib;<V8[RHX=TN;k=mYAH0
+R3
+I[?Yi5H@D]OR2hhG[=Hokg0
+R4
+R0
+w1760534336
+8../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v
+F../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v
+!i122 1
+L0 23 168
+R6
+r1
+!s85 0
+31
+R36
+R37
+R38
+!i113 1
+R10
+R11
+R12
+vsub_max
+!s10a 1760581072
+!s110 1760581090
+!i10b 1
+!s100 BAFnNIVQogRT7V8THj5hD0
+R3
+Ie5W0i9QG@@j8W^zzfLXIY1
+R4
+R0
+w1760581072
+8../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v
+F../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v
+!i122 7
+L0 23 76
+R6
+r1
+!s85 0
+31
+!s108 1760581090.000000
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vtdata_axis_broadcaster_0
+R1
+R2
+!i10b 1
+!s100 o9dGnobA9ZgZ8PG;MB;7V2
+R3
+I]hAe;1?mJHm_UUl[Fz9cm0
+R4
+R0
+R5
+8../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tdata_axis_broadcaster_0.v
+F../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tdata_axis_broadcaster_0.v
+!i122 3
+L0 48 11
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R10
+R11
+R12
+vtop_axis_broadcaster_0
+!s10a 1760582476
+R2
+!i10b 1
+!s100 F]Z_bMVoWE8e5i<GeDLNj0
+R3
+ISnml_9K`SdJT^clHR<7S_3
+R4
+R0
+w1760580890
+8../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/top_axis_broadcaster_0.v
+F../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/top_axis_broadcaster_0.v
+F../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/axis_infrastructure_v1_1_1.vh
+!i122 4
+L0 60 466
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vtuser_axis_broadcaster_0
+R1
+R2
+!i10b 1
+!s100 BoZo6:Wa[2zV=YK?1:4RF2
+R3
+I]bSedHAOfVD7LzVmL5R1f3
+R4
+R0
+R5
+8../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tuser_axis_broadcaster_0.v
+F../../../../Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/hdl/tuser_axis_broadcaster_0.v
+!i122 3
+L0 49 11
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R10
+R11
+R12

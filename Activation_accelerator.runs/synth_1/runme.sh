@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log get_maxof8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source get_maxof8.tcl
+EAStep vivado -log exp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source exp.tcl

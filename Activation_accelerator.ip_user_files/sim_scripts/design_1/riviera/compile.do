@@ -4,16 +4,23 @@ onerror {quit -force}
 transcript on
 
 vlib work
+vlib riviera/xpm
 vlib riviera/xil_defaultlib
 
+vmap xpm riviera/xpm
 vmap xil_defaultlib riviera/xil_defaultlib
 
-vlog -work xil_defaultlib  -incr -v2k5 -l xil_defaultlib \
-"../../../bd/design_1/ip/design_1_multiple_log2e_0_0/sim/design_1_multiple_log2e_0_0.v" \
-"../../../bd/design_1/ip/design_1_get_u_v_0_0/sim/design_1_get_u_v_0_0.v" \
-"../../../bd/design_1/ip/design_1_exp_from_uv_0_0/sim/design_1_exp_from_uv_0_0.v" \
-"../../../bd/design_1/sim/design_1.v" \
+vlog -work xpm  -incr -l xpm -l xil_defaultlib \
+"/home/anderson/vivado/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
+vcom -work xpm -93  -incr \
+"/home/anderson/vivado/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vlog -work xil_defaultlib  -incr -v2k5 -l xpm -l xil_defaultlib \
+"../../../bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v" \
+"../../../bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v" \
+"../../../bd/design_1/ip/design_1_exp_0_0/sim/design_1_exp_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
