@@ -35,6 +35,11 @@ module exp#(
     input M_AXIS_TREADY
     );
 
+    wire [ParallelNum-1:0] exp_ready;
+    wire [ParallelNum-1:0] exp_valid;
+    assign S_AXIS_TREADY = &exp_ready;
+    assign M_AXIS_TVALID = &exp_valid;
+
     genvar i;
 
     generate
@@ -49,7 +54,7 @@ module exp#(
 
             .S_AXIS_TDATA(S_AXIS_TDATA[16*i+15:16*i]),
             .S_AXIS_TVALID(S_AXIS_TVALID),
-            .S_AXIS_TREADY(S_AXIS_TREADY),
+            .S_AXIS_TREADY(exp_ready[i]),
 
             .M_AXIS_TDATA(data_1_2),
             .M_AXIS_TVALID(valid_1_2),
@@ -81,7 +86,7 @@ module exp#(
             .S_AXIS_TREADY(ready_2_3),
 
             .M_AXIS_TDATA(M_AXIS_TDATA[16*i+15:16*i]),
-            .M_AXIS_TVALID(M_AXIS_TVALID),
+            .M_AXIS_TVALID(exp_valid[i]),
             .M_AXIS_TREADY(M_AXIS_TREADY)
             );
         end

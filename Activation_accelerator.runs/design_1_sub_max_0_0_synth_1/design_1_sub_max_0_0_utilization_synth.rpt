@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Thu Oct 16 10:41:35 2025
+| Date         : Thu Oct 16 19:50:47 2025
 | Host         : Legion running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file design_1_sub_max_0_0_utilization_synth.rpt -pb design_1_sub_max_0_0_utilization_synth.pb
 | Design       : design_1_sub_max_0_0
@@ -32,8 +32,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |    0 |     0 |          0 |    117120 |  0.00 |
-|   LUT as Logic          |    0 |     0 |          0 |    117120 |  0.00 |
+| CLB LUTs*               |    3 |     0 |          0 |    117120 | <0.01 |
+|   LUT as Logic          |    3 |     0 |          0 |    117120 | <0.01 |
 |   LUT as Memory         |    0 |     0 |          0 |     57600 |  0.00 |
 | CLB Registers           |    0 |     0 |          0 |    234240 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |          0 |    234240 |  0.00 |
@@ -157,6 +157,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT6     |    3 |                 CLB |
++----------+------+---------------------+
 
 
 9. Black Boxes
@@ -168,7 +170,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | design_1_sub_max_0_0_floating_point_0     |    7 |
 | design_1_sub_max_0_0_floating_point_0_HD1 |    1 |
 | design_1_sub_max_0_0_axis_combiner_0      |    1 |
-| design_1_sub_max_0_0_axis_broadcaster_0   |    1 |
 +-------------------------------------------+------+
 
 

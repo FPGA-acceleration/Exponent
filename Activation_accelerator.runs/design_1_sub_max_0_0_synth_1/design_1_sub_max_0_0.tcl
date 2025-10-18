@@ -57,6 +57,10 @@ if {$::dispatch::connected} {
 
 OPTRACE "design_1_sub_max_0_0_synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath /home/anderson/intelFPGA/20.1/modelsim_ase/bin
+set_param power.BramSDPPropagationFix 1
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
@@ -85,9 +89,6 @@ set_property used_in_implementation false [get_files -all /home/anderson/vivado/
 
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/axis_combiner_0/axis_combiner_0.xci
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/axis_combiner_0/axis_combiner_0_ooc.xdc]
-
-read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/axis_broadcaster_0/axis_broadcaster_0.xci
-set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/axis_broadcaster_0/axis_broadcaster_0_ooc.xdc]
 
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/bd/design_1/ip/design_1_sub_max_0_0/design_1_sub_max_0_0.xci
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_sub_max_0_0/design_1_sub_max_0_0_ooc.xdc]

@@ -76,7 +76,7 @@ module serial_max(
 
 
     wire [127:0] shift_out;
-    c_shift_ram_0 your_instance_name (
+    c_shift_ram_0 shift_ram_u (
         .D(meta_data),      // input wire [127 : 0] D
         .CLK(aclk),  // input wire CLK
         .Q(shift_out)      // output wire [127 : 0] Q
@@ -115,10 +115,10 @@ module serial_max(
 
         else if(m_axis_tvalid[0]) begin
             if(count == 7'd95) begin
-                max_value <= s_axis_tdata;
+                max_value <= max_data;
             end
             else begin
-                max_value <= bf16_max(s_axis_tdata, max_value);
+                max_value <= bf16_max(max_data, max_value);
             end
         end
 

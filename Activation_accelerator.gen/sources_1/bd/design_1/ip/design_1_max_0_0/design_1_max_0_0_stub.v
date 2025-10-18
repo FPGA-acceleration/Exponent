@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Thu Oct 16 10:15:28 2025
+// Date        : Thu Oct 16 21:51:54 2025
 // Host        : Legion running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_max_0_0/design_1_max_0_0_stub.v

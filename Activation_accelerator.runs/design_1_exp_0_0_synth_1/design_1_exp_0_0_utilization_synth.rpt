@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Thu Oct 16 10:14:47 2025
+| Date         : Thu Oct 16 20:17:01 2025
 | Host         : Legion running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file design_1_exp_0_0_utilization_synth.rpt -pb design_1_exp_0_0_utilization_synth.pb
 | Design       : design_1_exp_0_0
@@ -32,8 +32,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               | 1026 |     0 |          0 |    117120 |  0.88 |
-|   LUT as Logic          | 1026 |     0 |          0 |    117120 |  0.88 |
+| CLB LUTs*               | 1029 |     0 |          0 |    117120 |  0.88 |
+|   LUT as Logic          | 1029 |     0 |          0 |    117120 |  0.88 |
 |   LUT as Memory         |    0 |     0 |          0 |     57600 |  0.00 |
 | CLB Registers           |  416 |     0 |          0 |    234240 |  0.18 |
 |   Register as Flip Flop |  416 |     0 |          0 |    234240 |  0.18 |
@@ -157,12 +157,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  480 |                 CLB |
+| LUT6     |  472 |                 CLB |
 | FDCE     |  416 |            Register |
-| LUT5     |  280 |                 CLB |
-| LUT4     |  240 |                 CLB |
+| LUT5     |  298 |                 CLB |
+| LUT4     |  242 |                 CLB |
 | LUT3     |  192 |                 CLB |
-| LUT2     |   97 |                 CLB |
+| LUT2     |   96 |                 CLB |
 | LUT1     |   17 |                 CLB |
 | CARRY8   |   16 |                 CLB |
 +----------+------+---------------------+

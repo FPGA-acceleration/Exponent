@@ -10,9 +10,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_po
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/axis_combiner_0/axis_combiner_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==axis_combiner_0 || ORIG_REF_NAME==axis_combiner_0} -quiet] -quiet
 
-# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/axis_broadcaster_0/axis_broadcaster_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==axis_broadcaster_0 || ORIG_REF_NAME==axis_broadcaster_0} -quiet] -quiet
-
 # XDC: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_sub_max_0_0/design_1_sub_max_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'design_1_sub_max_0_0'. Do not add the DONT_TOUCH constraint.
 set_property KEEP_HIERARCHY SOFT [get_cells inst -quiet] -quiet
@@ -25,9 +22,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells inst -quiet] -quiet
 
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/axis_combiner_0/axis_combiner_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==axis_combiner_0 || ORIG_REF_NAME==axis_combiner_0} -quiet] -quiet
-
-# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/axis_broadcaster_0/axis_broadcaster_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==axis_broadcaster_0 || ORIG_REF_NAME==axis_broadcaster_0} -quiet] -quiet
 
 # XDC: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_sub_max_0_0/design_1_sub_max_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'design_1_sub_max_0_0'. Do not add the DONT_TOUCH constraint.

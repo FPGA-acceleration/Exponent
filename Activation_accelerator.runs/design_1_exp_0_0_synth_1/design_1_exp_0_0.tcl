@@ -57,6 +57,10 @@ if {$::dispatch::connected} {
 
 OPTRACE "design_1_exp_0_0_synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath /home/anderson/intelFPGA/20.1/modelsim_ase/bin
+set_param power.BramSDPPropagationFix 1
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }

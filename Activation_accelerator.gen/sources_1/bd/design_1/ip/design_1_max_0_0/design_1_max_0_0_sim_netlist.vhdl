@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Thu Oct 16 10:15:28 2025
+-- Date        : Thu Oct 16 21:51:54 2025
 -- Host        : Legion running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_max_0_0/design_1_max_0_0_sim_netlist.vhdl
@@ -5831,7 +5831,6 @@ architecture STRUCTURE of design_1_max_0_0_serial_max is
   );
   end component design_1_max_0_0_c_shift_ram_0;
   signal \^q\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal a0 : STD_LOGIC;
   signal \^arstn_0\ : STD_LOGIC;
   signal bf16_max00 : STD_LOGIC;
   signal bf16_max000_in : STD_LOGIC;
@@ -5986,6 +5985,7 @@ architecture STRUCTURE of design_1_max_0_0_serial_max is
   signal \maxo_reg[15]_i_2_n_0\ : STD_LOGIC;
   signal meta_data : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal p_1_in : STD_LOGIC;
+  signal s_axis_tdata0 : STD_LOGIC;
   signal \s_axis_tdata_reg_n_0_[0]\ : STD_LOGIC;
   signal \s_axis_tdata_reg_n_0_[10]\ : STD_LOGIC;
   signal \s_axis_tdata_reg_n_0_[11]\ : STD_LOGIC;
@@ -6018,11 +6018,11 @@ architecture STRUCTURE of design_1_max_0_0_serial_max is
   attribute SOFT_HLUTNM of m_axis_tvalid_i_1 : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \maxo_reg[15]_i_2\ : label is "soft_lutpair0";
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of your_instance_name : label is "c_shift_ram_0,c_shift_ram_v12_0_18,{}";
+  attribute CHECK_LICENSE_TYPE of shift_ram_u : label is "c_shift_ram_0,c_shift_ram_v12_0_18,{}";
   attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of your_instance_name : label is "yes";
+  attribute downgradeipidentifiedwarnings of shift_ram_u : label is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of your_instance_name : label is "c_shift_ram_v12_0_18,Vivado 2024.2";
+  attribute x_core_info of shift_ram_u : label is "c_shift_ram_v12_0_18,Vivado 2024.2";
 begin
   Q(0) <= \^q\(0);
   arstn_0 <= \^arstn_0\;
@@ -6576,7 +6576,7 @@ bf16_max00_carry_i_9: unisim.vcomponents.LUT2
       I0 => \^q\(0),
       I1 => M_AXIS_TREADY,
       I2 => m_axis_tvalid,
-      O => a0
+      O => s_axis_tdata0
     );
 \m_axis_tvalid[97]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -6604,7 +6604,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
       C => aclk,
       CE => \m_axis_tvalid[97]_i_1_n_0\,
       CLR => \^arstn_0\,
-      D => a0,
+      D => s_axis_tdata0,
       Q => p_1_in
     );
 \m_axis_tvalid_reg[10]\: unisim.vcomponents.FDCE
@@ -7677,7 +7677,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(0),
       Q => \s_axis_tdata_reg_n_0_[0]\
@@ -7685,7 +7685,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[100]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(100),
       Q => meta_data(84)
@@ -7693,7 +7693,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[101]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(101),
       Q => meta_data(85)
@@ -7701,7 +7701,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[102]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(102),
       Q => meta_data(86)
@@ -7709,7 +7709,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[103]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(103),
       Q => meta_data(87)
@@ -7717,7 +7717,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[104]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(104),
       Q => meta_data(88)
@@ -7725,7 +7725,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[105]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(105),
       Q => meta_data(89)
@@ -7733,7 +7733,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[106]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(106),
       Q => meta_data(90)
@@ -7741,7 +7741,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[107]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(107),
       Q => meta_data(91)
@@ -7749,7 +7749,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[108]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(108),
       Q => meta_data(92)
@@ -7757,7 +7757,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[109]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(109),
       Q => meta_data(93)
@@ -7765,7 +7765,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[10]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(10),
       Q => \s_axis_tdata_reg_n_0_[10]\
@@ -7773,7 +7773,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[110]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(110),
       Q => meta_data(94)
@@ -7781,7 +7781,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[111]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(111),
       Q => meta_data(95)
@@ -7789,7 +7789,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[112]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(112),
       Q => meta_data(96)
@@ -7797,7 +7797,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[113]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(113),
       Q => meta_data(97)
@@ -7805,7 +7805,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[114]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(114),
       Q => meta_data(98)
@@ -7813,7 +7813,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[115]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(115),
       Q => meta_data(99)
@@ -7821,7 +7821,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[116]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(116),
       Q => meta_data(100)
@@ -7829,7 +7829,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[117]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(117),
       Q => meta_data(101)
@@ -7837,7 +7837,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[118]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(118),
       Q => meta_data(102)
@@ -7845,7 +7845,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[119]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(119),
       Q => meta_data(103)
@@ -7853,7 +7853,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[11]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(11),
       Q => \s_axis_tdata_reg_n_0_[11]\
@@ -7861,7 +7861,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[120]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(120),
       Q => meta_data(104)
@@ -7869,7 +7869,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[121]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(121),
       Q => meta_data(105)
@@ -7877,7 +7877,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[122]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(122),
       Q => meta_data(106)
@@ -7885,7 +7885,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[123]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(123),
       Q => meta_data(107)
@@ -7893,7 +7893,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[124]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(124),
       Q => meta_data(108)
@@ -7901,7 +7901,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[125]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(125),
       Q => meta_data(109)
@@ -7909,7 +7909,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[126]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(126),
       Q => meta_data(110)
@@ -7917,7 +7917,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[127]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(127),
       Q => meta_data(111)
@@ -7925,7 +7925,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[128]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(128),
       Q => meta_data(112)
@@ -7933,7 +7933,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[129]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(129),
       Q => meta_data(113)
@@ -7941,7 +7941,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[12]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(12),
       Q => \s_axis_tdata_reg_n_0_[12]\
@@ -7949,7 +7949,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[130]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(130),
       Q => meta_data(114)
@@ -7957,7 +7957,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[131]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(131),
       Q => meta_data(115)
@@ -7965,7 +7965,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[132]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(132),
       Q => meta_data(116)
@@ -7973,7 +7973,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[133]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(133),
       Q => meta_data(117)
@@ -7981,7 +7981,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[134]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(134),
       Q => meta_data(118)
@@ -7989,7 +7989,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[135]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(135),
       Q => meta_data(119)
@@ -7997,7 +7997,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[136]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(136),
       Q => meta_data(120)
@@ -8005,7 +8005,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[137]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(137),
       Q => meta_data(121)
@@ -8013,7 +8013,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[138]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(138),
       Q => meta_data(122)
@@ -8021,7 +8021,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[139]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(139),
       Q => meta_data(123)
@@ -8029,7 +8029,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[13]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(13),
       Q => \s_axis_tdata_reg_n_0_[13]\
@@ -8037,7 +8037,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[140]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(140),
       Q => meta_data(124)
@@ -8045,7 +8045,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[141]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(141),
       Q => meta_data(125)
@@ -8053,7 +8053,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[142]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(142),
       Q => meta_data(126)
@@ -8061,7 +8061,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[143]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(143),
       Q => meta_data(127)
@@ -8069,7 +8069,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[14]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(14),
       Q => \s_axis_tdata_reg_n_0_[14]\
@@ -8077,7 +8077,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[15]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(15),
       Q => \s_axis_tdata_reg_n_0_[15]\
@@ -8085,7 +8085,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[16]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(16),
       Q => meta_data(0)
@@ -8093,7 +8093,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[17]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(17),
       Q => meta_data(1)
@@ -8101,7 +8101,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[18]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(18),
       Q => meta_data(2)
@@ -8109,7 +8109,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[19]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(19),
       Q => meta_data(3)
@@ -8117,7 +8117,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(1),
       Q => \s_axis_tdata_reg_n_0_[1]\
@@ -8125,7 +8125,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[20]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(20),
       Q => meta_data(4)
@@ -8133,7 +8133,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[21]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(21),
       Q => meta_data(5)
@@ -8141,7 +8141,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[22]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(22),
       Q => meta_data(6)
@@ -8149,7 +8149,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[23]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(23),
       Q => meta_data(7)
@@ -8157,7 +8157,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[24]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(24),
       Q => meta_data(8)
@@ -8165,7 +8165,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[25]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(25),
       Q => meta_data(9)
@@ -8173,7 +8173,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[26]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(26),
       Q => meta_data(10)
@@ -8181,7 +8181,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[27]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(27),
       Q => meta_data(11)
@@ -8189,7 +8189,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[28]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(28),
       Q => meta_data(12)
@@ -8197,7 +8197,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[29]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(29),
       Q => meta_data(13)
@@ -8205,7 +8205,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(2),
       Q => \s_axis_tdata_reg_n_0_[2]\
@@ -8213,7 +8213,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[30]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(30),
       Q => meta_data(14)
@@ -8221,7 +8221,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[31]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(31),
       Q => meta_data(15)
@@ -8229,7 +8229,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[32]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(32),
       Q => meta_data(16)
@@ -8237,7 +8237,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[33]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(33),
       Q => meta_data(17)
@@ -8245,7 +8245,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[34]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(34),
       Q => meta_data(18)
@@ -8253,7 +8253,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[35]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(35),
       Q => meta_data(19)
@@ -8261,7 +8261,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[36]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(36),
       Q => meta_data(20)
@@ -8269,7 +8269,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[37]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(37),
       Q => meta_data(21)
@@ -8277,7 +8277,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[38]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(38),
       Q => meta_data(22)
@@ -8285,7 +8285,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[39]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(39),
       Q => meta_data(23)
@@ -8293,7 +8293,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(3),
       Q => \s_axis_tdata_reg_n_0_[3]\
@@ -8301,7 +8301,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[40]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(40),
       Q => meta_data(24)
@@ -8309,7 +8309,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[41]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(41),
       Q => meta_data(25)
@@ -8317,7 +8317,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[42]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(42),
       Q => meta_data(26)
@@ -8325,7 +8325,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[43]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(43),
       Q => meta_data(27)
@@ -8333,7 +8333,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[44]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(44),
       Q => meta_data(28)
@@ -8341,7 +8341,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[45]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(45),
       Q => meta_data(29)
@@ -8349,7 +8349,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[46]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(46),
       Q => meta_data(30)
@@ -8357,7 +8357,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[47]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(47),
       Q => meta_data(31)
@@ -8365,7 +8365,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[48]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(48),
       Q => meta_data(32)
@@ -8373,7 +8373,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[49]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(49),
       Q => meta_data(33)
@@ -8381,7 +8381,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[4]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(4),
       Q => \s_axis_tdata_reg_n_0_[4]\
@@ -8389,7 +8389,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[50]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(50),
       Q => meta_data(34)
@@ -8397,7 +8397,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[51]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(51),
       Q => meta_data(35)
@@ -8405,7 +8405,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[52]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(52),
       Q => meta_data(36)
@@ -8413,7 +8413,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[53]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(53),
       Q => meta_data(37)
@@ -8421,7 +8421,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[54]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(54),
       Q => meta_data(38)
@@ -8429,7 +8429,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[55]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(55),
       Q => meta_data(39)
@@ -8437,7 +8437,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[56]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(56),
       Q => meta_data(40)
@@ -8445,7 +8445,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[57]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(57),
       Q => meta_data(41)
@@ -8453,7 +8453,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[58]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(58),
       Q => meta_data(42)
@@ -8461,7 +8461,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[59]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(59),
       Q => meta_data(43)
@@ -8469,7 +8469,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[5]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(5),
       Q => \s_axis_tdata_reg_n_0_[5]\
@@ -8477,7 +8477,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[60]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(60),
       Q => meta_data(44)
@@ -8485,7 +8485,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[61]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(61),
       Q => meta_data(45)
@@ -8493,7 +8493,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[62]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(62),
       Q => meta_data(46)
@@ -8501,7 +8501,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[63]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(63),
       Q => meta_data(47)
@@ -8509,7 +8509,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[64]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(64),
       Q => meta_data(48)
@@ -8517,7 +8517,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[65]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(65),
       Q => meta_data(49)
@@ -8525,7 +8525,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[66]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(66),
       Q => meta_data(50)
@@ -8533,7 +8533,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[67]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(67),
       Q => meta_data(51)
@@ -8541,7 +8541,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[68]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(68),
       Q => meta_data(52)
@@ -8549,7 +8549,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[69]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(69),
       Q => meta_data(53)
@@ -8557,7 +8557,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[6]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(6),
       Q => \s_axis_tdata_reg_n_0_[6]\
@@ -8565,7 +8565,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[70]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(70),
       Q => meta_data(54)
@@ -8573,7 +8573,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[71]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(71),
       Q => meta_data(55)
@@ -8581,7 +8581,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[72]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(72),
       Q => meta_data(56)
@@ -8589,7 +8589,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[73]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(73),
       Q => meta_data(57)
@@ -8597,7 +8597,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[74]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(74),
       Q => meta_data(58)
@@ -8605,7 +8605,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[75]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(75),
       Q => meta_data(59)
@@ -8613,7 +8613,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[76]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(76),
       Q => meta_data(60)
@@ -8621,7 +8621,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[77]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(77),
       Q => meta_data(61)
@@ -8629,7 +8629,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[78]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(78),
       Q => meta_data(62)
@@ -8637,7 +8637,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[79]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(79),
       Q => meta_data(63)
@@ -8645,7 +8645,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[7]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(7),
       Q => \s_axis_tdata_reg_n_0_[7]\
@@ -8653,7 +8653,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[80]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(80),
       Q => meta_data(64)
@@ -8661,7 +8661,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[81]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(81),
       Q => meta_data(65)
@@ -8669,7 +8669,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[82]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(82),
       Q => meta_data(66)
@@ -8677,7 +8677,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[83]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(83),
       Q => meta_data(67)
@@ -8685,7 +8685,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[84]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(84),
       Q => meta_data(68)
@@ -8693,7 +8693,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[85]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(85),
       Q => meta_data(69)
@@ -8701,7 +8701,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[86]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(86),
       Q => meta_data(70)
@@ -8709,7 +8709,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[87]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(87),
       Q => meta_data(71)
@@ -8717,7 +8717,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[88]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(88),
       Q => meta_data(72)
@@ -8725,7 +8725,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[89]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(89),
       Q => meta_data(73)
@@ -8733,7 +8733,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[8]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(8),
       Q => \s_axis_tdata_reg_n_0_[8]\
@@ -8741,7 +8741,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[90]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(90),
       Q => meta_data(74)
@@ -8749,7 +8749,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[91]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(91),
       Q => meta_data(75)
@@ -8757,7 +8757,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[92]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(92),
       Q => meta_data(76)
@@ -8765,7 +8765,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[93]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(93),
       Q => meta_data(77)
@@ -8773,7 +8773,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[94]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(94),
       Q => meta_data(78)
@@ -8781,7 +8781,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[95]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(95),
       Q => meta_data(79)
@@ -8789,7 +8789,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[96]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(96),
       Q => meta_data(80)
@@ -8797,7 +8797,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[97]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(97),
       Q => meta_data(81)
@@ -8805,7 +8805,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[98]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(98),
       Q => meta_data(82)
@@ -8813,7 +8813,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[99]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(99),
       Q => meta_data(83)
@@ -8821,10 +8821,16 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
 \s_axis_tdata_reg[9]\: unisim.vcomponents.FDCE
      port map (
       C => aclk,
-      CE => a0,
+      CE => s_axis_tdata0,
       CLR => \^arstn_0\,
       D => D(9),
       Q => \s_axis_tdata_reg_n_0_[9]\
+    );
+shift_ram_u: component design_1_max_0_0_c_shift_ram_0
+     port map (
+      CLK => aclk,
+      D(127 downto 0) => meta_data(127 downto 0),
+      Q(127 downto 0) => shift_out(127 downto 0)
     );
 \shifto_reg[127]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -9857,12 +9863,6 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT4
       CLR => \^arstn_0\,
       D => shift_out(9),
       Q => M_AXIS_TDATA(25)
-    );
-your_instance_name: component design_1_max_0_0_c_shift_ram_0
-     port map (
-      CLK => aclk,
-      D(127 downto 0) => meta_data(127 downto 0),
-      Q(127 downto 0) => shift_out(127 downto 0)
     );
 end STRUCTURE;
 library IEEE;

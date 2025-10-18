@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Thu Oct 16 10:15:28 2025
+// Date        : Thu Oct 16 21:51:54 2025
 // Host        : Legion running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_max_0_0/design_1_max_0_0_sim_netlist.v
@@ -4490,7 +4490,6 @@ module design_1_max_0_0_serial_max
   wire [0:0]Q;
   wire S_AXIS_TREADY;
   wire S_AXIS_TVALID;
-  wire a0;
   wire aclk;
   wire arstn;
   wire arstn_0;
@@ -4649,6 +4648,7 @@ module design_1_max_0_0_serial_max
   wire \maxo_reg[15]_i_2_n_0 ;
   wire [127:0]meta_data;
   wire p_1_in;
+  wire s_axis_tdata0;
   wire \s_axis_tdata_reg_n_0_[0] ;
   wire \s_axis_tdata_reg_n_0_[10] ;
   wire \s_axis_tdata_reg_n_0_[11] ;
@@ -5045,7 +5045,7 @@ module design_1_max_0_0_serial_max
        (.I0(Q),
         .I1(M_AXIS_TREADY),
         .I2(m_axis_tvalid),
-        .O(a0));
+        .O(s_axis_tdata0));
   LUT3 #(
     .INIT(8'hD8)) 
     \m_axis_tvalid[97]_i_1 
@@ -5066,7 +5066,7 @@ module design_1_max_0_0_serial_max
        (.C(aclk),
         .CE(\m_axis_tvalid[97]_i_1_n_0 ),
         .CLR(arstn_0),
-        .D(a0),
+        .D(s_axis_tdata0),
         .Q(p_1_in));
   FDCE \m_axis_tvalid_reg[10] 
        (.C(aclk),
@@ -5871,868 +5871,875 @@ module design_1_max_0_0_serial_max
         .Q(M_AXIS_TDATA[9]));
   FDCE \s_axis_tdata_reg[0] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[0]),
         .Q(\s_axis_tdata_reg_n_0_[0] ));
   FDCE \s_axis_tdata_reg[100] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[100]),
         .Q(meta_data[84]));
   FDCE \s_axis_tdata_reg[101] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[101]),
         .Q(meta_data[85]));
   FDCE \s_axis_tdata_reg[102] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[102]),
         .Q(meta_data[86]));
   FDCE \s_axis_tdata_reg[103] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[103]),
         .Q(meta_data[87]));
   FDCE \s_axis_tdata_reg[104] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[104]),
         .Q(meta_data[88]));
   FDCE \s_axis_tdata_reg[105] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[105]),
         .Q(meta_data[89]));
   FDCE \s_axis_tdata_reg[106] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[106]),
         .Q(meta_data[90]));
   FDCE \s_axis_tdata_reg[107] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[107]),
         .Q(meta_data[91]));
   FDCE \s_axis_tdata_reg[108] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[108]),
         .Q(meta_data[92]));
   FDCE \s_axis_tdata_reg[109] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[109]),
         .Q(meta_data[93]));
   FDCE \s_axis_tdata_reg[10] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[10]),
         .Q(\s_axis_tdata_reg_n_0_[10] ));
   FDCE \s_axis_tdata_reg[110] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[110]),
         .Q(meta_data[94]));
   FDCE \s_axis_tdata_reg[111] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[111]),
         .Q(meta_data[95]));
   FDCE \s_axis_tdata_reg[112] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[112]),
         .Q(meta_data[96]));
   FDCE \s_axis_tdata_reg[113] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[113]),
         .Q(meta_data[97]));
   FDCE \s_axis_tdata_reg[114] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[114]),
         .Q(meta_data[98]));
   FDCE \s_axis_tdata_reg[115] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[115]),
         .Q(meta_data[99]));
   FDCE \s_axis_tdata_reg[116] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[116]),
         .Q(meta_data[100]));
   FDCE \s_axis_tdata_reg[117] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[117]),
         .Q(meta_data[101]));
   FDCE \s_axis_tdata_reg[118] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[118]),
         .Q(meta_data[102]));
   FDCE \s_axis_tdata_reg[119] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[119]),
         .Q(meta_data[103]));
   FDCE \s_axis_tdata_reg[11] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[11]),
         .Q(\s_axis_tdata_reg_n_0_[11] ));
   FDCE \s_axis_tdata_reg[120] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[120]),
         .Q(meta_data[104]));
   FDCE \s_axis_tdata_reg[121] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[121]),
         .Q(meta_data[105]));
   FDCE \s_axis_tdata_reg[122] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[122]),
         .Q(meta_data[106]));
   FDCE \s_axis_tdata_reg[123] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[123]),
         .Q(meta_data[107]));
   FDCE \s_axis_tdata_reg[124] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[124]),
         .Q(meta_data[108]));
   FDCE \s_axis_tdata_reg[125] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[125]),
         .Q(meta_data[109]));
   FDCE \s_axis_tdata_reg[126] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[126]),
         .Q(meta_data[110]));
   FDCE \s_axis_tdata_reg[127] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[127]),
         .Q(meta_data[111]));
   FDCE \s_axis_tdata_reg[128] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[128]),
         .Q(meta_data[112]));
   FDCE \s_axis_tdata_reg[129] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[129]),
         .Q(meta_data[113]));
   FDCE \s_axis_tdata_reg[12] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[12]),
         .Q(\s_axis_tdata_reg_n_0_[12] ));
   FDCE \s_axis_tdata_reg[130] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[130]),
         .Q(meta_data[114]));
   FDCE \s_axis_tdata_reg[131] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[131]),
         .Q(meta_data[115]));
   FDCE \s_axis_tdata_reg[132] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[132]),
         .Q(meta_data[116]));
   FDCE \s_axis_tdata_reg[133] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[133]),
         .Q(meta_data[117]));
   FDCE \s_axis_tdata_reg[134] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[134]),
         .Q(meta_data[118]));
   FDCE \s_axis_tdata_reg[135] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[135]),
         .Q(meta_data[119]));
   FDCE \s_axis_tdata_reg[136] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[136]),
         .Q(meta_data[120]));
   FDCE \s_axis_tdata_reg[137] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[137]),
         .Q(meta_data[121]));
   FDCE \s_axis_tdata_reg[138] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[138]),
         .Q(meta_data[122]));
   FDCE \s_axis_tdata_reg[139] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[139]),
         .Q(meta_data[123]));
   FDCE \s_axis_tdata_reg[13] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[13]),
         .Q(\s_axis_tdata_reg_n_0_[13] ));
   FDCE \s_axis_tdata_reg[140] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[140]),
         .Q(meta_data[124]));
   FDCE \s_axis_tdata_reg[141] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[141]),
         .Q(meta_data[125]));
   FDCE \s_axis_tdata_reg[142] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[142]),
         .Q(meta_data[126]));
   FDCE \s_axis_tdata_reg[143] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[143]),
         .Q(meta_data[127]));
   FDCE \s_axis_tdata_reg[14] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[14]),
         .Q(\s_axis_tdata_reg_n_0_[14] ));
   FDCE \s_axis_tdata_reg[15] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[15]),
         .Q(\s_axis_tdata_reg_n_0_[15] ));
   FDCE \s_axis_tdata_reg[16] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[16]),
         .Q(meta_data[0]));
   FDCE \s_axis_tdata_reg[17] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[17]),
         .Q(meta_data[1]));
   FDCE \s_axis_tdata_reg[18] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[18]),
         .Q(meta_data[2]));
   FDCE \s_axis_tdata_reg[19] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[19]),
         .Q(meta_data[3]));
   FDCE \s_axis_tdata_reg[1] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[1]),
         .Q(\s_axis_tdata_reg_n_0_[1] ));
   FDCE \s_axis_tdata_reg[20] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[20]),
         .Q(meta_data[4]));
   FDCE \s_axis_tdata_reg[21] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[21]),
         .Q(meta_data[5]));
   FDCE \s_axis_tdata_reg[22] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[22]),
         .Q(meta_data[6]));
   FDCE \s_axis_tdata_reg[23] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[23]),
         .Q(meta_data[7]));
   FDCE \s_axis_tdata_reg[24] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[24]),
         .Q(meta_data[8]));
   FDCE \s_axis_tdata_reg[25] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[25]),
         .Q(meta_data[9]));
   FDCE \s_axis_tdata_reg[26] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[26]),
         .Q(meta_data[10]));
   FDCE \s_axis_tdata_reg[27] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[27]),
         .Q(meta_data[11]));
   FDCE \s_axis_tdata_reg[28] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[28]),
         .Q(meta_data[12]));
   FDCE \s_axis_tdata_reg[29] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[29]),
         .Q(meta_data[13]));
   FDCE \s_axis_tdata_reg[2] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[2]),
         .Q(\s_axis_tdata_reg_n_0_[2] ));
   FDCE \s_axis_tdata_reg[30] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[30]),
         .Q(meta_data[14]));
   FDCE \s_axis_tdata_reg[31] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[31]),
         .Q(meta_data[15]));
   FDCE \s_axis_tdata_reg[32] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[32]),
         .Q(meta_data[16]));
   FDCE \s_axis_tdata_reg[33] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[33]),
         .Q(meta_data[17]));
   FDCE \s_axis_tdata_reg[34] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[34]),
         .Q(meta_data[18]));
   FDCE \s_axis_tdata_reg[35] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[35]),
         .Q(meta_data[19]));
   FDCE \s_axis_tdata_reg[36] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[36]),
         .Q(meta_data[20]));
   FDCE \s_axis_tdata_reg[37] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[37]),
         .Q(meta_data[21]));
   FDCE \s_axis_tdata_reg[38] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[38]),
         .Q(meta_data[22]));
   FDCE \s_axis_tdata_reg[39] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[39]),
         .Q(meta_data[23]));
   FDCE \s_axis_tdata_reg[3] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[3]),
         .Q(\s_axis_tdata_reg_n_0_[3] ));
   FDCE \s_axis_tdata_reg[40] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[40]),
         .Q(meta_data[24]));
   FDCE \s_axis_tdata_reg[41] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[41]),
         .Q(meta_data[25]));
   FDCE \s_axis_tdata_reg[42] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[42]),
         .Q(meta_data[26]));
   FDCE \s_axis_tdata_reg[43] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[43]),
         .Q(meta_data[27]));
   FDCE \s_axis_tdata_reg[44] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[44]),
         .Q(meta_data[28]));
   FDCE \s_axis_tdata_reg[45] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[45]),
         .Q(meta_data[29]));
   FDCE \s_axis_tdata_reg[46] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[46]),
         .Q(meta_data[30]));
   FDCE \s_axis_tdata_reg[47] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[47]),
         .Q(meta_data[31]));
   FDCE \s_axis_tdata_reg[48] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[48]),
         .Q(meta_data[32]));
   FDCE \s_axis_tdata_reg[49] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[49]),
         .Q(meta_data[33]));
   FDCE \s_axis_tdata_reg[4] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[4]),
         .Q(\s_axis_tdata_reg_n_0_[4] ));
   FDCE \s_axis_tdata_reg[50] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[50]),
         .Q(meta_data[34]));
   FDCE \s_axis_tdata_reg[51] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[51]),
         .Q(meta_data[35]));
   FDCE \s_axis_tdata_reg[52] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[52]),
         .Q(meta_data[36]));
   FDCE \s_axis_tdata_reg[53] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[53]),
         .Q(meta_data[37]));
   FDCE \s_axis_tdata_reg[54] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[54]),
         .Q(meta_data[38]));
   FDCE \s_axis_tdata_reg[55] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[55]),
         .Q(meta_data[39]));
   FDCE \s_axis_tdata_reg[56] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[56]),
         .Q(meta_data[40]));
   FDCE \s_axis_tdata_reg[57] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[57]),
         .Q(meta_data[41]));
   FDCE \s_axis_tdata_reg[58] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[58]),
         .Q(meta_data[42]));
   FDCE \s_axis_tdata_reg[59] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[59]),
         .Q(meta_data[43]));
   FDCE \s_axis_tdata_reg[5] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[5]),
         .Q(\s_axis_tdata_reg_n_0_[5] ));
   FDCE \s_axis_tdata_reg[60] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[60]),
         .Q(meta_data[44]));
   FDCE \s_axis_tdata_reg[61] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[61]),
         .Q(meta_data[45]));
   FDCE \s_axis_tdata_reg[62] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[62]),
         .Q(meta_data[46]));
   FDCE \s_axis_tdata_reg[63] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[63]),
         .Q(meta_data[47]));
   FDCE \s_axis_tdata_reg[64] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[64]),
         .Q(meta_data[48]));
   FDCE \s_axis_tdata_reg[65] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[65]),
         .Q(meta_data[49]));
   FDCE \s_axis_tdata_reg[66] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[66]),
         .Q(meta_data[50]));
   FDCE \s_axis_tdata_reg[67] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[67]),
         .Q(meta_data[51]));
   FDCE \s_axis_tdata_reg[68] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[68]),
         .Q(meta_data[52]));
   FDCE \s_axis_tdata_reg[69] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[69]),
         .Q(meta_data[53]));
   FDCE \s_axis_tdata_reg[6] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[6]),
         .Q(\s_axis_tdata_reg_n_0_[6] ));
   FDCE \s_axis_tdata_reg[70] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[70]),
         .Q(meta_data[54]));
   FDCE \s_axis_tdata_reg[71] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[71]),
         .Q(meta_data[55]));
   FDCE \s_axis_tdata_reg[72] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[72]),
         .Q(meta_data[56]));
   FDCE \s_axis_tdata_reg[73] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[73]),
         .Q(meta_data[57]));
   FDCE \s_axis_tdata_reg[74] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[74]),
         .Q(meta_data[58]));
   FDCE \s_axis_tdata_reg[75] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[75]),
         .Q(meta_data[59]));
   FDCE \s_axis_tdata_reg[76] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[76]),
         .Q(meta_data[60]));
   FDCE \s_axis_tdata_reg[77] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[77]),
         .Q(meta_data[61]));
   FDCE \s_axis_tdata_reg[78] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[78]),
         .Q(meta_data[62]));
   FDCE \s_axis_tdata_reg[79] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[79]),
         .Q(meta_data[63]));
   FDCE \s_axis_tdata_reg[7] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[7]),
         .Q(\s_axis_tdata_reg_n_0_[7] ));
   FDCE \s_axis_tdata_reg[80] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[80]),
         .Q(meta_data[64]));
   FDCE \s_axis_tdata_reg[81] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[81]),
         .Q(meta_data[65]));
   FDCE \s_axis_tdata_reg[82] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[82]),
         .Q(meta_data[66]));
   FDCE \s_axis_tdata_reg[83] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[83]),
         .Q(meta_data[67]));
   FDCE \s_axis_tdata_reg[84] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[84]),
         .Q(meta_data[68]));
   FDCE \s_axis_tdata_reg[85] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[85]),
         .Q(meta_data[69]));
   FDCE \s_axis_tdata_reg[86] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[86]),
         .Q(meta_data[70]));
   FDCE \s_axis_tdata_reg[87] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[87]),
         .Q(meta_data[71]));
   FDCE \s_axis_tdata_reg[88] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[88]),
         .Q(meta_data[72]));
   FDCE \s_axis_tdata_reg[89] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[89]),
         .Q(meta_data[73]));
   FDCE \s_axis_tdata_reg[8] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[8]),
         .Q(\s_axis_tdata_reg_n_0_[8] ));
   FDCE \s_axis_tdata_reg[90] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[90]),
         .Q(meta_data[74]));
   FDCE \s_axis_tdata_reg[91] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[91]),
         .Q(meta_data[75]));
   FDCE \s_axis_tdata_reg[92] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[92]),
         .Q(meta_data[76]));
   FDCE \s_axis_tdata_reg[93] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[93]),
         .Q(meta_data[77]));
   FDCE \s_axis_tdata_reg[94] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[94]),
         .Q(meta_data[78]));
   FDCE \s_axis_tdata_reg[95] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[95]),
         .Q(meta_data[79]));
   FDCE \s_axis_tdata_reg[96] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[96]),
         .Q(meta_data[80]));
   FDCE \s_axis_tdata_reg[97] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[97]),
         .Q(meta_data[81]));
   FDCE \s_axis_tdata_reg[98] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[98]),
         .Q(meta_data[82]));
   FDCE \s_axis_tdata_reg[99] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[99]),
         .Q(meta_data[83]));
   FDCE \s_axis_tdata_reg[9] 
        (.C(aclk),
-        .CE(a0),
+        .CE(s_axis_tdata0),
         .CLR(arstn_0),
         .D(D[9]),
         .Q(\s_axis_tdata_reg_n_0_[9] ));
+  (* CHECK_LICENSE_TYPE = "c_shift_ram_0,c_shift_ram_v12_0_18,{}" *) 
+  (* downgradeipidentifiedwarnings = "yes" *) 
+  (* x_core_info = "c_shift_ram_v12_0_18,Vivado 2024.2" *) 
+  design_1_max_0_0_c_shift_ram_0 shift_ram_u
+       (.CLK(aclk),
+        .D(meta_data),
+        .Q(shift_out));
   LUT1 #(
     .INIT(2'h1)) 
     \shifto_reg[127]_i_1 
@@ -7506,13 +7513,6 @@ module design_1_max_0_0_serial_max
         .CLR(arstn_0),
         .D(shift_out[9]),
         .Q(M_AXIS_TDATA[25]));
-  (* CHECK_LICENSE_TYPE = "c_shift_ram_0,c_shift_ram_v12_0_18,{}" *) 
-  (* downgradeipidentifiedwarnings = "yes" *) 
-  (* x_core_info = "c_shift_ram_v12_0_18,Vivado 2024.2" *) 
-  design_1_max_0_0_c_shift_ram_0 your_instance_name
-       (.CLK(aclk),
-        .D(meta_data),
-        .Q(shift_out));
 endmodule
 `ifndef GLBL
 `define GLBL

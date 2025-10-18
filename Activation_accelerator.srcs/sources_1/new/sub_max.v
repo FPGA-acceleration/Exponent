@@ -33,46 +33,29 @@ module sub_max(
     input M_AXIS_TREADY
     );
 
-
-    wire [287:0] tdata_broad_2_sub;
-    wire [1:0] tvalid_broad_2_sub;
-    wire [1:0] tready_broad_2_sub;
-
-    wire [143:0] data1 = tdata_broad_2_sub[143:0];
-    wire [143:0] data2 = tdata_broad_2_sub[287:144];
-
-    axis_broadcaster_0 broad_u (
-        .aclk(aclk),                    // input wire aclk
-        .aresetn(arstn),              // input wire aresetn
-
-        .s_axis_tvalid(S_AXIS_TVALID),  // input wire s_axis_tvalid
-        .s_axis_tready(S_AXIS_TREADY),  // output wire s_axis_tready
-        .s_axis_tdata(S_AXIS_TDATA),    // input wire [143 : 0] s_axis_tdata
-
-        .m_axis_tvalid(tvalid_broad_2_sub),  // output wire [1 : 0] m_axis_tvalid
-        .m_axis_tready(tready_broad_2_sub),  // input wire [1 : 0] m_axis_tready
-        .m_axis_tdata(tdata_broad_2_sub)    // output wire [287 : 0] m_axis_tdata
-    );
-
     
     wire [127:0] tdata_sub_2_comb;
     wire [7:0] tvalid_sub_2_comb;
     wire [7:0] tready_sub_2_comb;
 
+    wire [15:0] s_axis_tready;
+
+    assign S_AXIS_TREADY = &s_axis_tready;
+
     genvar i;
 
     generate
         for(i=0;i<8;i=i+1) begin:sub_inst
-            floating_point_0 your_instance_name (
+            floating_point_0 sub_u (
                 .aclk(aclk),                                  // input wire aclk
                 .aresetn(arstn),                            // input wire aresetn
-                .s_axis_a_tvalid(tvalid_broad_2_sub[0]),            // input wire s_axis_a_tvalid
-                .s_axis_a_tready(tready_broad_2_sub[0]),            // output wire s_axis_a_tready
-                .s_axis_a_tdata(data2[(16+i*16)+:16]),              // input wire [15 : 0] s_axis_a_tdata
+                .s_axis_a_tvalid(S_AXIS_TVALID),            // input wire s_axis_a_tvalid
+                .s_axis_a_tready(s_axis_tready[2*i]),            // output wire s_axis_a_tready
+                .s_axis_a_tdata(S_AXIS_TDATA[(16+i*16)+:16]),              // input wire [15 : 0] s_axis_a_tdata
 
-                .s_axis_b_tvalid(tvalid_broad_2_sub[1]),            // input wire s_axis_b_tvalid
-                .s_axis_b_tready(tready_broad_2_sub[1]),            // output wire s_axis_b_tready
-                .s_axis_b_tdata(data1[15:0]),              // input wire [15 : 0] s_axis_b_tdata
+                .s_axis_b_tvalid(S_AXIS_TVALID),            // input wire s_axis_b_tvalid
+                .s_axis_b_tready(s_axis_tready[2*i+1]),            // output wire s_axis_b_tready
+                .s_axis_b_tdata(S_AXIS_TDATA[15:0]),              // input wire [15 : 0] s_axis_b_tdata
 
                 .m_axis_result_tvalid(tvalid_sub_2_comb[i]),  // output wire m_axis_result_tvalid
                 .m_axis_result_tready(tready_sub_2_comb[i]),  // input wire m_axis_result_tready

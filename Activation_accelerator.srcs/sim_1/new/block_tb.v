@@ -2,7 +2,7 @@
 
 module block_tb();
     parameter CLK_PERIOD = 10; // 100 MHz clock
-    parameter NUM_ELEMENTS = 1536;
+    parameter NUM_ELEMENTS = 64*768;
     parameter BURST_SIZE = 8;
     parameter NUM_BURSTS = NUM_ELEMENTS / BURST_SIZE;
     
@@ -28,15 +28,27 @@ module block_tb();
     
     always #(CLK_PERIOD/2) aclk = ~aclk;
     
-    reg [15:0] bf16_memory [1535:0];
+    reg [15:0] bf16_memory [64*768-1:0];
     
     reg [15:0] test0, test1, test2, test3, test4, test5, test6, test7;
-    wire [15:0] res0, res1, res2, res3, res4, res5, res6, res7;
-    assign {res7, res6, res5, res4, res3, res2, res1, res0} = M_AXIS_TDATA;
+    wire [15:0] result0, result1, result2, result3, result4, result5, result6, result7;
+
+    assign {result7, result6, result5, result4, result3, result2, result1, result0} = M_AXIS_TDATA;
     
+    integer fd;
+    integer n;
+    integer c;
     initial begin
-        $readmemh("bf16_data_10.hex", bf16_memory, 0, 767);
-        $readmemh("bf16_data.hex", bf16_memory, 768, 1535); 
+        fd = $fopen("X_test_tensor_bf16.bin", "rb");
+        n = $fread(bf16_memory, fd);
+        
+        for(c=0;c<NUM_ELEMENTS;c=c+1) begin
+            bf16_memory[c] = {bf16_memory[c][7:0], bf16_memory[c][15:8]};
+        end
+        
+        $display("%d byte data has been loaded", n);
+        //$readmemh("bf16_data_1.hex", bf16_memory, 0, 767);
+        //$readmemh("bf16_data_0.hex", bf16_memory, 768, 1535); 
     end
     
     integer i, j;
@@ -87,9 +99,30 @@ module block_tb();
         $display("Simulation completed successfully");
     end
     
-    initial begin
+    
+    integer count;
+    always @(posedge aclk or negedge arstn) begin 
+        if(!arstn) begin
+            count<=32'b0;
+        end
         
+        else if(M_AXIS_TVALID) begin
+            if(count==32'd95) count<=32'b0;
+            else count<=count+1;
+        end
+        
+        else count<=count;
     end
+    
+    integer batch;
+    always @(posedge aclk or negedge arstn) begin
+        if(!arstn)
+            batch <= 0;
+        else if(count == 32'd95)
+            batch <= batch + 1;
+        else batch <= batch;
+    end
+
     
     
 endmodule
