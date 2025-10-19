@@ -51,6 +51,14 @@ module block_tb();
         //$readmemh("bf16_data_0.hex", bf16_memory, 768, 1535); 
     end
     
+    integer fd1;
+    initial begin
+        fd1 = $fopen("result.txt", "wb");
+        $display("result file has been opened");
+    end
+    
+    
+    
     integer i, j;
     reg [127:0] temp_data;
     
@@ -114,13 +122,32 @@ module block_tb();
         else count<=count;
     end
     
+    integer k;
+    always @(posedge aclk) begin 
+        if(M_AXIS_TVALID) begin
+            for(k=0;k<16;k=k+1) begin
+                $fwrite(fd1, "%c", M_AXIS_TDATA[8*k+:8]);
+            end
+        end
+    end
+    
+    
     integer batch;
     always @(posedge aclk or negedge arstn) begin
         if(!arstn)
             batch <= 0;
-        else if(count == 32'd95)
+        else if(count == 32'd95) begin
             batch <= batch + 1;
+            $display("Now in batch %d", batch);
+        end
         else batch <= batch;
+    end
+    
+    
+    initial begin
+        wait(batch == 64);
+        $fclose(fd1);
+        $stop;
     end
 
     

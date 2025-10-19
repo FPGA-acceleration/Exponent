@@ -9,12 +9,12 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.sim/sim_1/behav/modelsim
-EkbPW2iDT4ho2V2UJ4WhCPH4VgcjGyzCL8yXJ3iFBFQs=
-Z1 w1760685332
+E+fyz0QCr0jXTk2Y0VAcQbOCRXn6Cf1st4v4rrlc5b68=
+Z1 w1760843849
 Z2 DPx17 c_reg_fd_v12_0_10 26 c_reg_fd_v12_0_10_viv_comp 0 22 fbD8E3TXNVBmeSWaiGRWb1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 17
+!i122 14
 R0
 Z5 8../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/c_reg_fd_v12_0_vh_rfs.vhd
 Z6 F../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/c_reg_fd_v12_0_vh_rfs.vhd
@@ -24,30 +24,30 @@ VUT;ozUY6IIXf=Z[oCG>0:1
 !s100 oEQ9PGI`ne<0hl`Lk7B=42
 Z8 OV;C;2020.1;71
 !i119 1
-!i8a 2024384624
+!i8a 1012291584
 31
-Z9 !s110 1760691610
+Z9 !s110 1760844413
 !i10b 1
-Z10 !s108 1760691610.000000
+Z10 !s108 1760844413.000000
 Z11 !s90 -93|-work|c_reg_fd_v12_0_10|../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/c_reg_fd_v12_0_vh_rfs.vhd|
 Z12 !s107 ../../../../Activation_accelerator.ip_user_files/ipstatic/hdl/c_reg_fd_v12_0_vh_rfs.vhd|
 !i113 1
 Z13 o-93 -work c_reg_fd_v12_0_10
 Z14 tExplicit 1 CvgOpt 0
 n9546c60
-A5LQi2J58WXWSsH7fxq6+nQ==
+AjYotfSs5ETj691QwUjVpbg==
 R2
 R3
 R4
 Z15 DEx4 work 17 c_reg_fd_v12_0_10 0 22 UT;ozUY6IIXf=Z[oCG>0:1
-!i122 17
+!i122 14
 l105
 R7
 Z16 V]KCGYTjWOhKRaLi<bZImY1
 Z17 !s100 KnH[77`d59PBg5RaM<cK52
 R8
 !i119 1
-!i8a 1098681312
+!i8a 1303999344
 31
 R9
 !i10b 1
@@ -58,10 +58,10 @@ R12
 R13
 R14
 Z18 n7f03058
-Ps7bGiewD7ker8JxLYVa0QjjKSK4kXkzHptFc+RSIlhw=
+PZGHNbgGs/BznepOoRZJlZ1lVrJTVzgmV8ObOnvZTmV0=
 R3
 R4
-!i122 17
+!i122 14
 R1
 R0
 R5
@@ -72,7 +72,7 @@ VIQVn?KW:B=jT<=K:^iozo2
 !s100 ^F9H31cVjAzl_F:dhhUoa0
 R8
 !i119 1
-!i8a 1232941232
+!i8a 1361494320
 31
 R9
 !i10b 1
@@ -83,12 +83,12 @@ R12
 R13
 R14
 n6d0e480
-Ed1KGKtqfiuJ8WF1DWa+vg/8mwuew8Po5KJ8LQYe11pk=
+EV1+8Ii1+HYXxtJw26zc5ZdC6xchLLCrquCXtMNeTiiA=
 R1
 Z19 DPx18 xbip_utils_v3_0_14 22 xbip_utils_v3_0_14_pkg 0 22 >db2lGKek?NDk9@dL`zbb1
 R3
 R4
-!i122 17
+!i122 14
 R0
 R5
 R6
@@ -98,7 +98,7 @@ VYjiKd6_kWd1_VPHg>jg=e1
 !s100 _AJ]jSNA>dKb8m^8Fk?3G2
 R8
 !i119 1
-!i8a 216057488
+!i8a 86162432
 31
 R9
 !i10b 1
@@ -109,19 +109,19 @@ R12
 R13
 R14
 nc6d3966
-AfGv821lzPq+aOE96yMnIZQ==
+AoHNBR3wZTjfRQzlsyGqCOg==
 R19
 R3
 R4
 Z20 DEx4 work 21 c_reg_fd_v12_0_10_viv 0 22 YjiKd6_kWd1_VPHg>jg=e1
-!i122 17
+!i122 14
 l105
 R7
 Z21 V2D8DZd6zX@JZJK>g`0PXL0
 Z22 !s100 gD?AgUcMz>RTWY7Pf1`z>3
 R8
 !i119 1
-!i8a 322299296
+!i8a 1101872640
 31
 R9
 !i10b 1
@@ -132,10 +132,10 @@ R12
 R13
 R14
 Z23 nbac63ec
-Psa7j8+QGwDTNaYLzsu6r+54FaTIfdmdylqDG4u/1bjg=
+PA4Z046vXlzlauo4NeNgVMO0ZqL7itSMf+t34Z6T0p7M=
 R3
 R4
-!i122 17
+!i122 14
 R1
 R0
 R5
@@ -146,7 +146,7 @@ VfbD8E3TXNVBmeSWaiGRWb1
 !s100 VRj80^0L1d_0HdJ<o>MKL3
 R8
 !i119 1
-!i8a 1681250960
+!i8a 149099472
 31
 R9
 !i10b 1

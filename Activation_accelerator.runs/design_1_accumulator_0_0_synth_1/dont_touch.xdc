@@ -7,11 +7,11 @@
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_2/c_shift_ram_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_shift_ram_2 || ORIG_REF_NAME==c_shift_ram_2} -quiet] -quiet
 
-# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_2/floating_point_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_2 || ORIG_REF_NAME==floating_point_2} -quiet] -quiet
-
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_1/floating_point_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_1 || ORIG_REF_NAME==floating_point_1} -quiet] -quiet
+
+# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_2/floating_point_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_2 || ORIG_REF_NAME==floating_point_2} -quiet] -quiet
 
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_1/c_shift_ram_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_shift_ram_1 || ORIG_REF_NAME==c_shift_ram_1} -quiet] -quiet
@@ -26,11 +26,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells inst -quiet] -quiet
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_2/c_shift_ram_2.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_shift_ram_2 || ORIG_REF_NAME==c_shift_ram_2} -quiet] -quiet
 
-# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_2/floating_point_2.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_2 || ORIG_REF_NAME==floating_point_2} -quiet] -quiet
-
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_1/floating_point_1.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_1 || ORIG_REF_NAME==floating_point_1} -quiet] -quiet
+
+# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_2/floating_point_2.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_2 || ORIG_REF_NAME==floating_point_2} -quiet] -quiet
 
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_1/c_shift_ram_1.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_shift_ram_1 || ORIG_REF_NAME==c_shift_ram_1} -quiet] -quiet

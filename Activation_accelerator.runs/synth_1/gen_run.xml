@@ -128,12 +128,12 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_add8_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="axis_combiner_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="c_shift_ram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="floating_point_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_exp_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="c_shift_ram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_gen_tlast_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_sub_max_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="floating_point_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="floating_point_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_max_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="floating_point_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axis_combiner_0"/>
 </GenRun>

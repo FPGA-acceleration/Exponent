@@ -1,0 +1,313 @@
+
+*** Running vivado
+    with args -log design_1_expv2_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_expv2_0_0.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Oct 18 13:56:50 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_expv2_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/anderson/vivado/Vivado/2024.2/data/ip'.
+Command: synth_design -top design_1_expv2_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14221
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2462.027 ; gain = 127.688 ; free physical = 3604 ; free virtual = 18008
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_expv2_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/synth/design_1_expv2_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'expv2' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/expv2.v:23]
+	Parameter ParallelNum bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'floating_point_3' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/.Xil/Vivado-14045-Legion/realtime/floating_point_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_3' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/.Xil/Vivado-14045-Legion/realtime/floating_point_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'floating_point_fixed' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/.Xil/Vivado-14045-Legion/realtime/floating_point_fixed_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_fixed' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/.Xil/Vivado-14045-Legion/realtime/floating_point_fixed_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exp_from_uv' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'exp_from_uv' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/exp_from_uv.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'expv2' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/expv2.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_expv2_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/synth/design_1_expv2_0_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2533.996 ; gain = 199.656 ; free physical = 3516 ; free virtual = 17921
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2536.965 ; gain = 202.625 ; free physical = 3516 ; free virtual = 17921
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2536.965 ; gain = 202.625 ; free physical = 3516 ; free virtual = 17921
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2540.965 ; gain = 0.000 ; free physical = 3516 ; free virtual = 17921
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[0].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[0].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[1].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[1].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[2].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[2].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[3].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[3].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[4].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[4].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[5].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[5].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[6].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[6].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[7].fixed'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed/floating_point_fixed_in_context.xdc] for cell 'inst/exp_inst[7].fixed'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[0].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[0].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[1].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[1].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[2].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[2].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[3].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[3].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[4].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[4].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[5].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[5].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[6].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[6].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[7].mul'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3/floating_point_3_in_context.xdc] for cell 'inst/exp_inst[7].mul'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/design_1_expv2_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/design_1_expv2_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2655.430 ; gain = 0.000 ; free physical = 3546 ; free virtual = 17951
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2655.430 ; gain = 0.000 ; free physical = 3546 ; free virtual = 17951
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2655.430 ; gain = 321.090 ; free physical = 3580 ; free virtual = 17985
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2663.434 ; gain = 329.094 ; free physical = 3580 ; free virtual = 17985
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/dont_touch.xdc, line 15).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[0].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[1].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[2].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[3].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[4].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[5].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[6].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[7].fixed . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[0].mul . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[1].mul . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[2].mul . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[3].mul . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[4].mul . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[5].mul . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[6].mul . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\exp_inst[7].mul . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2663.434 ; gain = 329.094 ; free physical = 3580 ; free virtual = 17985
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2663.434 ; gain = 329.094 ; free physical = 3580 ; free virtual = 17986
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 8     
++---Registers : 
+	               16 Bit    Registers := 16    
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2663.434 ; gain = 329.094 ; free physical = 3603 ; free virtual = 18009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+----------------------------------------+---------------+----------------+
+|Module Name | RTL Object                             | Depth x Width | Implemented As | 
++------------+----------------------------------------+---------------+----------------+
+|exp_from_uv | exp2_func                              | 256x7         | LUT            | 
+|expv2       | exp_inst[0].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
+|expv2       | exp_inst[1].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
+|expv2       | exp_inst[2].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
+|expv2       | exp_inst[3].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
+|expv2       | exp_inst[4].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
+|expv2       | exp_inst[5].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
+|expv2       | exp_inst[6].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
+|expv2       | exp_inst[7].exp_from_uv_inst/exp2_func | 256x7         | LUT            | 
++------------+----------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3260.477 ; gain = 926.137 ; free physical = 3033 ; free virtual = 17439
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3280.508 ; gain = 946.168 ; free physical = 3018 ; free virtual = 17425
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3280.508 ; gain = 946.168 ; free physical = 3019 ; free virtual = 17426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------+----------+
+|      |BlackBox name        |Instances |
++------+---------------------+----------+
+|1     |floating_point_3     |         8|
+|2     |floating_point_fixed |         8|
++------+---------------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |floating_point       |     1|
+|2     |floating_point_3     |     7|
+|9     |floating_point_fixed |     8|
+|17    |LUT1                 |     1|
+|18    |LUT2                 |    16|
+|19    |LUT3                 |    32|
+|20    |LUT4                 |     2|
+|21    |LUT5                 |    10|
+|22    |LUT6                 |   248|
+|23    |MUXF7                |    80|
+|24    |MUXF8                |    40|
+|25    |FDCE                 |   136|
++------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17295
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3433.320 ; gain = 980.516 ; free physical = 2889 ; free virtual = 17296
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3433.320 ; gain = 1098.980 ; free physical = 2889 ; free virtual = 17296
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3433.320 ; gain = 0.000 ; free physical = 3061 ; free virtual = 17468
+INFO: [Netlist 29-17] Analyzing 120 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3433.320 ; gain = 0.000 ; free physical = 3061 ; free virtual = 17468
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 370c6cba
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:29 . Memory (MB): peak = 3433.320 ; gain = 1952.379 ; free physical = 3061 ; free virtual = 17468
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2570.023; main = 2570.023; forked = 269.081
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4053.434; main = 3415.520; forked = 924.812
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3439.527 ; gain = 0.000 ; free physical = 3061 ; free virtual = 17468
+INFO: [Common 17-1381] The checkpoint '/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_expv2_0_0_synth_1/design_1_expv2_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_expv2_0_0_utilization_synth.rpt -pb design_1_expv2_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 18 13:57:23 2025...

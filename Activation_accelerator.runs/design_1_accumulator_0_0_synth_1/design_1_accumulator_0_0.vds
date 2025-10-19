@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Oct 17 10:40:28 2025
-# Process ID         : 21246
+# Start of session at: Sat Oct 18 11:59:16 2025
+# Process ID         : 27506
 # Current directory  : /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1
 # Command line       : vivado -log design_1_accumulator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_accumulator_0_0.tcl
 # Log file           : /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/design_1_accumulator_0_0.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 22.04.5 LTS
 # Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
-# CPU Frequency      : 399.916 MHz
+# CPU Frequency      : 524.368 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 16
 # Host memory        : 16546 MB
 # Swap memory        : 10000 MB
 # Total Virtual      : 26546 MB
-# Available Virtual  : 21057 MB
+# Available Virtual  : 20656 MB
 #-----------------------------------------------------------
 source design_1_accumulator_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -32,51 +32,49 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21281
+INFO: [Synth 8-7075] Helper process launched with PID 27566
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2464.152 ; gain = 129.594 ; free physical = 3887 ; free virtual = 18524
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2461.879 ; gain = 126.688 ; free physical = 1293 ; free virtual = 16147
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_accumulator_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_accumulator_0_0/synth/design_1_accumulator_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'accumulator' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/accumulator.v:23]
 INFO: [Synth 8-6157] synthesizing module 'acc' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/acc.v:22]
-INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/c_shift_ram_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_1' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/c_shift_ram_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/c_shift_ram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_1' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/c_shift_ram_1_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'add8' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/add8.v:1]
-INFO: [Synth 8-6157] synthesizing module 'floating_point_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/floating_point_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'floating_point_1' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/floating_point_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'floating_point_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/floating_point_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_1' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/floating_point_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'add8' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/add8.v:1]
 INFO: [Synth 8-6157] synthesizing module 'gen_tlast' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/gen_tlast.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'gen_tlast' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/gen_tlast.v:23]
-INFO: [Synth 8-6157] synthesizing module 'floating_point_2' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/floating_point_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'floating_point_2' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/floating_point_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'floating_point_2' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/floating_point_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_2' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/floating_point_2_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'acc' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/acc.v:22]
 INFO: [Synth 8-6157] synthesizing module 'acc_fifo' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/acc_fifo.v:23]
-INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_2' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/c_shift_ram_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_2' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-21246-Legion/realtime/c_shift_ram_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_2' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/c_shift_ram_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_2' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/.Xil/Vivado-27506-Legion/realtime/c_shift_ram_2_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'acc_fifo' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/acc_fifo.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'accumulator' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/accumulator.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_accumulator_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_accumulator_0_0/synth/design_1_accumulator_0_0.v:53]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2535.121 ; gain = 200.562 ; free physical = 3788 ; free virtual = 18426
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2533.816 ; gain = 198.625 ; free physical = 1291 ; free virtual = 16145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2538.090 ; gain = 203.531 ; free physical = 3804 ; free virtual = 18442
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2533.816 ; gain = 198.625 ; free physical = 1283 ; free virtual = 16139
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2538.090 ; gain = 203.531 ; free physical = 3804 ; free virtual = 18442
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2533.816 ; gain = 198.625 ; free physical = 1283 ; free virtual = 16139
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2542.090 ; gain = 0.000 ; free physical = 3792 ; free virtual = 18430
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2537.816 ; gain = 0.000 ; free physical = 1283 ; free virtual = 16139
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/c_shift_ram_2/c_shift_ram_2_in_context.xdc] for cell 'inst/fifo_u/shift_ram_u'
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/c_shift_ram_2/c_shift_ram_2_in_context.xdc] for cell 'inst/fifo_u/shift_ram_u'
-Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'inst/acc_u/acc_u'
-Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'inst/acc_u/acc_u'
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'inst/acc_u/add8_u/STAGE1[0].add_s1'
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'inst/acc_u/add8_u/STAGE1[0].add_s1'
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'inst/acc_u/add8_u/STAGE1[1].add_s1'
@@ -91,6 +89,8 @@ Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activatio
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'inst/acc_u/add8_u/STAGE2[1].add_s2'
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'inst/acc_u/add8_u/add_s3'
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'inst/acc_u/add8_u/add_s3'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'inst/acc_u/acc_u'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'inst/acc_u/acc_u'
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/c_shift_ram_1/c_shift_ram_1_in_context.xdc] for cell 'inst/acc_u/shift_ram_u'
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/c_shift_ram_1/c_shift_ram_1_in_context.xdc] for cell 'inst/acc_u/shift_ram_u'
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_accumulator_0_0/design_1_accumulator_0_0_ooc.xdc] for cell 'inst'
@@ -99,14 +99,14 @@ Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activatio
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2653.891 ; gain = 0.000 ; free physical = 3756 ; free virtual = 18394
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2652.312 ; gain = 0.000 ; free physical = 1404 ; free virtual = 16259
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2653.891 ; gain = 0.000 ; free physical = 3794 ; free virtual = 18431
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2652.312 ; gain = 0.000 ; free physical = 1404 ; free virtual = 16259
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2653.891 ; gain = 319.332 ; free physical = 3840 ; free virtual = 18477
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2652.312 ; gain = 317.121 ; free physical = 1428 ; free virtual = 16283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -114,14 +114,13 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2661.895 ; gain = 327.336 ; free physical = 3840 ; free virtual = 18477
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2660.316 ; gain = 325.125 ; free physical = 1428 ; free virtual = 16283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/dont_touch.xdc, line 21).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/fifo_u/shift_ram_u. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/acc_u. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/add8_u/\STAGE1[0].add_s1 . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/add8_u/\STAGE1[1].add_s1 . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/add8_u/\STAGE1[2].add_s1 . (constraint file  auto generated constraint).
@@ -129,12 +128,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/add8_u/\STAGE1[3].add_
 Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/add8_u/\STAGE2[0].add_s2 . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/add8_u/\STAGE2[1].add_s2 . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/add8_u/add_s3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/acc_u. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/acc_u/shift_ram_u. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2661.895 ; gain = 327.336 ; free physical = 3840 ; free virtual = 18477
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2660.316 ; gain = 325.125 ; free physical = 1428 ; free virtual = 16283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2661.895 ; gain = 327.336 ; free physical = 3840 ; free virtual = 18478
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2660.316 ; gain = 325.125 ; free physical = 1428 ; free virtual = 16285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -166,25 +166,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2661.895 ; gain = 327.336 ; free physical = 3826 ; free virtual = 18465
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2660.316 ; gain = 325.125 ; free physical = 1498 ; free virtual = 16355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3258.969 ; gain = 924.410 ; free physical = 3055 ; free virtual = 17667
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3259.328 ; gain = 924.137 ; free physical = 667 ; free virtual = 15524
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3288.016 ; gain = 953.457 ; free physical = 3024 ; free virtual = 17635
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3288.375 ; gain = 953.184 ; free physical = 634 ; free virtual = 15492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3288.016 ; gain = 953.457 ; free physical = 3016 ; free virtual = 17627
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3288.375 ; gain = 953.184 ; free physical = 634 ; free virtual = 15491
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -202,37 +202,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17498
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 356 ; free virtual = 15213
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17498
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 356 ; free virtual = 15213
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17498
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 356 ; free virtual = 15213
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17498
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 356 ; free virtual = 15213
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17498
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 356 ; free virtual = 15213
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17498
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 356 ; free virtual = 15213
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -265,16 +265,16 @@ Report Cell Usage:
 |17    |FDPE             |     6|
 +------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17498
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 350 ; free virtual = 15208
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3430.828 ; gain = 980.469 ; free physical = 2868 ; free virtual = 17502
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3430.828 ; gain = 1096.270 ; free physical = 2868 ; free virtual = 17502
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3430.188 ; gain = 976.500 ; free physical = 337 ; free virtual = 15194
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3430.188 ; gain = 1094.996 ; free physical = 337 ; free virtual = 15194
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3430.828 ; gain = 0.000 ; free physical = 3061 ; free virtual = 17697
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3430.188 ; gain = 0.000 ; free physical = 491 ; free virtual = 15349
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3430.828 ; gain = 0.000 ; free physical = 3170 ; free virtual = 17807
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3430.188 ; gain = 0.000 ; free physical = 387 ; free virtual = 15244
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -282,11 +282,11 @@ Synth Design complete | Checksum: 339df703
 INFO: [Common 17-83] Releasing license: Synthesis
 37 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 3430.828 ; gain = 1984.012 ; free physical = 3168 ; free virtual = 17805
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2790.083; main = 2560.322; forked = 267.949
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4328.832; main = 3413.027; forked = 924.812
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 3430.188 ; gain = 2014.637 ; free physical = 387 ; free virtual = 15244
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2649.638; main = 2437.073; forked = 226.969
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4327.188; main = 3412.387; forked = 924.809
 INFO: [Coretcl 2-1174] Renamed 10 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3437.035 ; gain = 0.000 ; free physical = 3168 ; free virtual = 17805
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3436.395 ; gain = 0.000 ; free physical = 387 ; free virtual = 15244
 INFO: [Common 17-1381] The checkpoint '/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/design_1_accumulator_0_0_synth_1/design_1_accumulator_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_accumulator_0_0_utilization_synth.rpt -pb design_1_accumulator_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 17 10:40:58 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 18 11:59:46 2025...

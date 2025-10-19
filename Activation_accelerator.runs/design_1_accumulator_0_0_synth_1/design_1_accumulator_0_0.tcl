@@ -69,7 +69,6 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.cache/wt [current_project]
 set_property parent.project_path /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
@@ -89,11 +88,11 @@ read_verilog -library xil_defaultlib {
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_2/c_shift_ram_2.xci
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/c_shift_ram_2_ooc.xdc]
 
-read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_2/floating_point_2.xci
-set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2_ooc.xdc]
-
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_1/floating_point_1.xci
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1_ooc.xdc]
+
+read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_2/floating_point_2.xci
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2_ooc.xdc]
 
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_1/c_shift_ram_1.xci
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/c_shift_ram_1_ooc.xdc]

@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Fri Oct 17 12:22:17 2025
+//Date        : Sat Oct 18 13:56:45 2025
 //Host        : Legion running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -40,9 +40,9 @@ module design_1
   wire accumulator_M_AXIS_TVALID;
   wire aclk;
   wire arstn;
-  wire [127:0]exp_M_AXIS_TDATA;
-  wire exp_M_AXIS_TREADY;
-  wire exp_M_AXIS_TVALID;
+  wire [127:0]expv2_M_AXIS_TDATA;
+  wire expv2_M_AXIS_TREADY;
+  wire expv2_M_AXIS_TVALID;
   wire [143:0]max_M_AXIS_TDATA;
   wire max_M_AXIS_TREADY;
   wire max_M_AXIS_TVALID;
@@ -54,9 +54,9 @@ module design_1
        (.M_AXIS_TDATA(accumulator_M_AXIS_TDATA),
         .M_AXIS_TREADY(accumulator_M_AXIS_TREADY),
         .M_AXIS_TVALID(accumulator_M_AXIS_TVALID),
-        .S_AXIS_TDATA(exp_M_AXIS_TDATA),
-        .S_AXIS_TREADY(exp_M_AXIS_TREADY),
-        .S_AXIS_TVALID(exp_M_AXIS_TVALID),
+        .S_AXIS_TDATA(expv2_M_AXIS_TDATA),
+        .S_AXIS_TREADY(expv2_M_AXIS_TREADY),
+        .S_AXIS_TVALID(expv2_M_AXIS_TVALID),
         .aclk(aclk),
         .arstn(arstn));
   design_1_divide_0_0 divide_0
@@ -68,10 +68,10 @@ module design_1
         .S_AXIS_TVALID(accumulator_M_AXIS_TVALID),
         .aclk(aclk),
         .arstn(arstn));
-  design_1_exp_0_0 exp
-       (.M_AXIS_TDATA(exp_M_AXIS_TDATA),
-        .M_AXIS_TREADY(exp_M_AXIS_TREADY),
-        .M_AXIS_TVALID(exp_M_AXIS_TVALID),
+  design_1_expv2_0_0 expv2
+       (.M_AXIS_TDATA(expv2_M_AXIS_TDATA),
+        .M_AXIS_TREADY(expv2_M_AXIS_TREADY),
+        .M_AXIS_TVALID(expv2_M_AXIS_TVALID),
         .S_AXIS_TDATA(sub_max_M_AXIS_TDATA),
         .S_AXIS_TREADY(sub_max_M_AXIS_TREADY),
         .S_AXIS_TVALID(sub_max_M_AXIS_TVALID),
