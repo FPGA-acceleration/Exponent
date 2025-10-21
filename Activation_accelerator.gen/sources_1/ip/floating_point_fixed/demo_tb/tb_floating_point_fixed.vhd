@@ -85,7 +85,7 @@ architecture tb of tb_floating_point_fixed is
   constant CLOCK_PERIOD : time := 100 ns;
   constant T_HOLD       : time := 10 ns;
   constant T_STROBE     : time := CLOCK_PERIOD - (1 ns);
-  constant DUT_DELAY    : time := CLOCK_PERIOD * 3;
+  constant DUT_DELAY    : time := CLOCK_PERIOD * 4;
 
   -----------------------------------------------------------------------
   -- Testbench types and signals
@@ -368,7 +368,7 @@ architecture tb of tb_floating_point_fixed is
   -- A operand slave channel signals
   signal s_axis_a_tvalid         : std_logic := '0';  -- payload is valid
   signal s_axis_a_tready         : std_logic := '1';  -- slave is ready
-  signal s_axis_a_tdata          : std_logic_vector(15 downto 0) := (others => '0');  -- data payload
+  signal s_axis_a_tdata          : std_logic_vector(31 downto 0) := (others => '0');  -- data payload
 
   -- Result master channel signals
   signal m_axis_result_tvalid    : std_logic := '0';
@@ -387,7 +387,7 @@ architecture tb of tb_floating_point_fixed is
   signal s_axis_a_tdata_special : floating_point_special_t := normal;  -- indicate special values
   signal s_axis_a_tdata_sign    : std_logic := '0';  -- sign bit
   signal s_axis_a_tdata_exp     : std_logic_vector(7 downto 0) := (others => '0');  -- exponent (biased)
-  signal s_axis_a_tdata_mant    : std_logic_vector(6 downto 0) := (others => '0');  -- mantissa (without hidden bit)
+  signal s_axis_a_tdata_mant    : std_logic_vector(22 downto 0) := (others => '0');  -- mantissa (without hidden bit)
 
 
 
@@ -488,7 +488,7 @@ begin
   stimuli_a : process
 
     -- Procedure to drive a single transaction on the A channel
-    procedure drive_a_single(tdata : std_logic_vector(15 downto 0);
+    procedure drive_a_single(tdata : std_logic_vector(31 downto 0);
                              variable abort : out boolean) is
     begin
       -- Drive AXI signals
@@ -517,14 +517,14 @@ begin
                       count   : positive := 1;
                       step    : real     := 0.0) is
       variable value     : real := data;
-      variable value_slv : std_logic_vector(15 downto 0);
-      variable tdata     : std_logic_vector(15 downto 0);
+      variable value_slv : std_logic_vector(31 downto 0);
+      variable tdata     : std_logic_vector(31 downto 0);
       variable ip_count  : natural := 0;
       variable abort     : boolean;
     begin
       count_loop : loop
         -- Convert data from real to std_logic_vector
-        value_slv := real_to_flt(value, special, 16, 8);
+        value_slv := real_to_flt(value, special, 32, 24);
         -- Set up AXI signals
         tdata := value_slv;
         -- Drive AXI transaction
@@ -543,7 +543,7 @@ begin
 
 
 
-    variable tdata : std_logic_vector(15 downto 0) := (others => '0');
+    variable tdata : std_logic_vector(31 downto 0) := (others => '0');
     variable abort : boolean;
 
   begin
@@ -607,14 +607,14 @@ begin
     -- flt_to_fix(minus infinity) : invalid operation, overflow, result = largest negative fixed point number available
     drive_a(0.0, inf_neg);
     -- flt_to_fix(very large number) : overflow, result = largest positive fixed point number available
-    tdata(15) := '0';  -- sign bit
-    tdata(14 downto 7) := std_logic_vector(to_unsigned(254, 8));  -- biased exponent = largest
-    tdata(6 downto 0) := (others => '1');  -- mantissa without hidden bit = largest
+    tdata(31) := '0';  -- sign bit
+    tdata(30 downto 23) := std_logic_vector(to_unsigned(254, 8));  -- biased exponent = largest
+    tdata(22 downto 0) := (others => '1');  -- mantissa without hidden bit = largest
     drive_a_single(tdata, abort);
     -- flt_to_fix(-(very large number)) : overflow, result = largest negative fixed point number available
-    tdata(15) := '1';  -- sign bit
-    tdata(14 downto 7) := std_logic_vector(to_unsigned(254, 8));  -- biased exponent = largest
-    tdata(6 downto 0) := (others => '1');  -- mantissa without hidden bit = largest
+    tdata(31) := '1';  -- sign bit
+    tdata(30 downto 23) := std_logic_vector(to_unsigned(254, 8));  -- biased exponent = largest
+    tdata(22 downto 0) := (others => '1');  -- mantissa without hidden bit = largest
     drive_a_single(tdata, abort);
     -- flt_to_fix(Not a Number) : invalid operation, result = largest negative fixed point number available
     drive_a(0.0, nan);
@@ -681,11 +681,11 @@ begin
   -----------------------------------------------------------------------
 
   -- A operand slave channel alias signals
-  s_axis_a_tdata_real    <= flt_to_real(s_axis_a_tdata(15 downto 0), 16, 8);
-  s_axis_a_tdata_special <= flt_to_special(s_axis_a_tdata(15 downto 0), 16, 8);
-  s_axis_a_tdata_sign    <= s_axis_a_tdata(15);
-  s_axis_a_tdata_exp     <= s_axis_a_tdata(14 downto 7);
-  s_axis_a_tdata_mant    <= s_axis_a_tdata(6 downto 0);
+  s_axis_a_tdata_real    <= flt_to_real(s_axis_a_tdata(31 downto 0), 32, 24);
+  s_axis_a_tdata_special <= flt_to_special(s_axis_a_tdata(31 downto 0), 32, 24);
+  s_axis_a_tdata_sign    <= s_axis_a_tdata(31);
+  s_axis_a_tdata_exp     <= s_axis_a_tdata(30 downto 23);
+  s_axis_a_tdata_mant    <= s_axis_a_tdata(22 downto 0);
 
   -- Result master channel alias signals
   m_axis_result_tdata_real     <= fix_to_real(m_axis_result_tdata(15 downto 0), 16, 8) when m_axis_result_tvalid = '1';

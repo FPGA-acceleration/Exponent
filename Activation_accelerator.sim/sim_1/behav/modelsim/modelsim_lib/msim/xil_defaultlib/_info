@@ -11,8 +11,7 @@ z2
 cModel Technology
 Z0 d/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.sim/sim_1/behav/modelsim
 vacc
-!s10a 1760668456
-Z1 !s110 1760760045
+Z1 !s110 1761036898
 !i10b 1
 !s100 mE[a79oUIzN6MV?gKeC@73
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,15 +27,14 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1760760045.000000
-Z6 !s107 ../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_expv2_0_0/sim/design_1_expv2_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_divide_0_0/sim/design_1_divide_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_accumulator_0_0/sim/design_1_accumulator_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v|../../../../Activation_accelerator.srcs/sources_1/new/expv2.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_fixed/sim/floating_point_fixed.v|../../../../Activation_accelerator.srcs/sources_1/new/divide.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal_lut.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal.v|../../../../Activation_accelerator.srcs/sources_1/new/latency4_fifo.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_3/sim/floating_point_3.v|../../../../Activation_accelerator.srcs/sources_1/new/accumulator.v|../../../../Activation_accelerator.srcs/sources_1/new/gen_tlast.v|../../../../Activation_accelerator.srcs/sources_1/new/add8.v|../../../../Activation_accelerator.srcs/sources_1/new/acc_fifo.v|../../../../Activation_accelerator.srcs/sources_1/new/acc.v|
-Z7 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.srcs/sources_1/new/acc.v|../../../../Activation_accelerator.srcs/sources_1/new/acc_fifo.v|../../../../Activation_accelerator.srcs/sources_1/new/add8.v|../../../../Activation_accelerator.srcs/sources_1/new/gen_tlast.v|../../../../Activation_accelerator.srcs/sources_1/new/accumulator.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_3/sim/floating_point_3.v|../../../../Activation_accelerator.srcs/sources_1/new/latency4_fifo.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal_lut.v|../../../../Activation_accelerator.srcs/sources_1/new/divide.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_fixed/sim/floating_point_fixed.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.srcs/sources_1/new/expv2.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_accumulator_0_0/sim/design_1_accumulator_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_divide_0_0/sim/design_1_divide_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_expv2_0_0/sim/design_1_expv2_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v|../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v|../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|
+Z5 !s108 1761036897.000000
+Z6 !s107 ../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_expv2_0_0/sim/design_1_expv2_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_divide_0_0/sim/design_1_divide_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_accumulator_0_0/sim/design_1_accumulator_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v|../../../../Activation_accelerator.srcs/sources_1/new/expv2.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_3/sim/floating_point_3.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_fixed/sim/floating_point_fixed.v|../../../../Activation_accelerator.srcs/sources_1/new/divide.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal_lut.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal.v|../../../../Activation_accelerator.srcs/sources_1/new/latency4_fifo.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_mul16/sim/floating_point_mul16.v|../../../../Activation_accelerator.srcs/sources_1/new/accumulator.v|../../../../Activation_accelerator.srcs/sources_1/new/gen_tlast.v|../../../../Activation_accelerator.srcs/sources_1/new/add8.v|../../../../Activation_accelerator.srcs/sources_1/new/acc_fifo.v|../../../../Activation_accelerator.srcs/sources_1/new/acc.v|
+Z7 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.srcs/sources_1/new/acc.v|../../../../Activation_accelerator.srcs/sources_1/new/acc_fifo.v|../../../../Activation_accelerator.srcs/sources_1/new/add8.v|../../../../Activation_accelerator.srcs/sources_1/new/gen_tlast.v|../../../../Activation_accelerator.srcs/sources_1/new/accumulator.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_mul16/sim/floating_point_mul16.v|../../../../Activation_accelerator.srcs/sources_1/new/latency4_fifo.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal.v|../../../../Activation_accelerator.srcs/sources_1/new/reciprocal_lut.v|../../../../Activation_accelerator.srcs/sources_1/new/divide.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_fixed/sim/floating_point_fixed.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_3/sim/floating_point_3.v|../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v|../../../../Activation_accelerator.srcs/sources_1/new/expv2.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_accumulator_0_0/sim/design_1_accumulator_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_divide_0_0/sim/design_1_divide_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_expv2_0_0/sim/design_1_expv2_0_0.v|../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v|../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v|../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v|
 !i113 1
 Z8 o-mfcu -work xil_defaultlib
 Z9 !s92 -mfcu -work xil_defaultlib +incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl
 Z10 tCvgOpt 0
 vacc_fifo
-!s10a 1760667558
 R1
 !i10b 1
 !s100 hj=MzK30f;bZ20<ZOJ[N72
@@ -61,7 +59,6 @@ R8
 R9
 R10
 vaccumulator
-!s10a 1760668752
 R1
 !i10b 1
 !s100 5=[h^;B0^019P9?PmE2=n0
@@ -86,7 +83,6 @@ R8
 R9
 R10
 vadd8
-!s10a 1760614104
 R1
 !i10b 1
 !s100 RX=a;Gf5D[75<Ha:ImIVT1
@@ -111,8 +107,7 @@ R8
 R9
 R10
 vaxis_combiner_0
-!s10a 1760536166
-Z11 !s110 1760760044
+Z11 !s110 1761036897
 !i10b 1
 !s100 g7Bl3Z6hoLINCIAI>W@5Y0
 R2
@@ -128,15 +123,15 @@ R4
 r1
 !s85 0
 31
-Z12 !s108 1760760044.000000
-Z13 !s107 ../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v|
-Z14 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v|../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v|
+R5
+Z12 !s107 ../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v|../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v|
+Z13 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/axis_combiner_0/sim/axis_combiner_0.v|../../../../Activation_accelerator.srcs/sources_1/new/sub_max.v|
 !i113 1
 R8
 R9
 R10
 vblock_tb
-Z15 !s110 1760844418
+R1
 !i10b 1
 !s100 nDFNHLeZViL1@R^9Pce:W1
 R2
@@ -146,13 +141,13 @@ R0
 w1760844396
 8../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v
 F../../../../Activation_accelerator.srcs/sim_1/new/block_tb.v
-!i122 67
+!i122 7
 L0 3 153
 R4
 r1
 !s85 0
 31
-Z16 !s108 1760844418.000000
+R5
 R6
 R7
 !i113 1
@@ -160,168 +155,167 @@ R8
 R9
 R10
 Ec_shift_ram_0
-Z17 w1760528269
-Z18 DPx20 c_shift_ram_v12_0_18 29 c_shift_ram_v12_0_18_viv_comp 0 22 d4gd^8@T;X6IYJM:`>LJS1
-Z19 DPx18 xbip_utils_v3_0_14 22 xbip_utils_v3_0_14_pkg 0 22 >db2lGKek?NDk9@dL`zbb1
-Z20 DEx20 c_shift_ram_v12_0_18 20 c_shift_ram_v12_0_18 0 22 ;8lN^XLVLKmhK=cVz2?6h2
-Z21 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z22 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z23 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 63
+Z14 w1760528269
+Z15 DPx20 c_shift_ram_v12_0_18 29 c_shift_ram_v12_0_18_viv_comp 0 22 d4gd^8@T;X6IYJM:`>LJS1
+Z16 DPx18 xbip_utils_v3_0_14 22 xbip_utils_v3_0_14_pkg 0 22 >db2lGKek?NDk9@dL`zbb1
+Z17 DEx20 c_shift_ram_v12_0_18 20 c_shift_ram_v12_0_18 0 22 ;8lN^XLVLKmhK=cVz2?6h2
+Z18 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z19 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z20 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
 R0
-Z24 8../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd
-Z25 F../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd
+Z21 8../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd
+Z22 F../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd
 l0
-Z26 L59 1
+Z23 L59 1
 VIbIDoI?5Qi8oDA@`;MNVf0
 !s100 VGjT8=Yd`2SkFEIH?<nU^3
-Z27 OV;C;2020.1;71
+Z24 OV;C;2020.1;71
 31
-Z28 !s110 1760844413
+Z25 !s110 1761036893
 !i10b 1
-Z29 !s108 1760844413.000000
-Z30 !s90 -93|-work|xil_defaultlib|../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd|
-Z31 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd|
+Z26 !s108 1761036893.000000
+Z27 !s90 -93|-work|xil_defaultlib|../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd|
+Z28 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd|
 !i113 1
-Z32 o-93 -work xil_defaultlib
-Z33 tExplicit 1 CvgOpt 0
+Z29 o-93 -work xil_defaultlib
+Z30 tExplicit 1 CvgOpt 0
 Ac_shift_ram_0_arch
+R15
+R16
 R18
 R19
-R21
-R22
-R23
+R20
 DEx4 work 13 c_shift_ram_0 0 22 IbIDoI?5Qi8oDA@`;MNVf0
-!i122 63
+!i122 0
 l118
-Z34 L67 88
+Z31 L67 88
 VG_7R0`<L1[Y1W_7;bbKBk2
 !s100 J^1KDzUA8f:dEK516DT><1
-R27
+R24
 31
-R28
+R25
 !i10b 1
+R26
+R27
+R28
+!i113 1
 R29
 R30
-R31
-!i113 1
-R32
-R33
 Ec_shift_ram_1
-Z35 w1760619899
+Z32 w1760619899
+R15
+R16
+R17
 R18
 R19
 R20
-R21
-R22
-R23
-!i122 66
+!i122 6
 R0
-Z36 8../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd
-Z37 F../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd
+Z33 8../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd
+Z34 F../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd
 l0
-R26
+R23
 VLn=]18U21WoIFB=c@h1O80
 !s100 IRUkSH6E3VYW8CDnLZOJ;1
-R27
+R24
 31
-R15
+R11
 !i10b 1
-R16
-Z38 !s90 -93|-work|xil_defaultlib|../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd|
-Z39 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd|
+R5
+Z35 !s90 -93|-work|xil_defaultlib|../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd|
+Z36 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd|
 !i113 1
-R32
-R33
+R29
+R30
 Ac_shift_ram_1_arch
-R18
-R19
-R21
-R22
-R23
-DEx4 work 13 c_shift_ram_1 0 22 Ln=]18U21WoIFB=c@h1O80
-!i122 66
-l118
-R34
-V9nYfnD^T[PQ69l0c;h4e01
-!s100 ;hd<1UL_JYRNLB6TIaD4P3
-R27
-31
 R15
-!i10b 1
 R16
-R38
-R39
-!i113 1
-R32
-R33
-Ec_shift_ram_2
-Z40 w1760667199
 R18
 R19
 R20
-R21
-R22
-R23
-!i122 64
-R0
-Z41 8../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd
-Z42 F../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd
-l0
-R26
-VQHY^]D:JILOmafiAGemWM1
-!s100 gncLoL^[5LKj^O@H[YF<=1
-R27
+DEx4 work 13 c_shift_ram_1 0 22 Ln=]18U21WoIFB=c@h1O80
+!i122 6
+l118
+R31
+V9nYfnD^T[PQ69l0c;h4e01
+!s100 ;hd<1UL_JYRNLB6TIaD4P3
+R24
 31
-R15
+R11
 !i10b 1
-R16
-Z43 !s90 -93|-work|xil_defaultlib|../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd|
-Z44 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd|
+R5
+R35
+R36
 !i113 1
-R32
-R33
-Ac_shift_ram_2_arch
+R29
+R30
+Ec_shift_ram_2
+Z37 w1760667199
+R15
+R16
+R17
 R18
 R19
-R21
-R22
+R20
+!i122 4
+R0
+Z38 8../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd
+Z39 F../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd
+l0
 R23
+VQHY^]D:JILOmafiAGemWM1
+!s100 gncLoL^[5LKj^O@H[YF<=1
+R24
+31
+R11
+!i10b 1
+R5
+Z40 !s90 -93|-work|xil_defaultlib|../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd|
+Z41 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd|
+!i113 1
+R29
+R30
+Ac_shift_ram_2_arch
+R15
+R16
+R18
+R19
+R20
 DEx4 work 13 c_shift_ram_2 0 22 QHY^]D:JILOmafiAGemWM1
-!i122 64
+!i122 4
 l122
 L68 91
 VlLQEF<amYQb3l>M4a9?Fk0
 !s100 faMDChmn8DBVHINXKac0?3
-R27
+R24
 31
-R15
+R11
 !i10b 1
-R16
-R43
-R44
+R5
+R40
+R41
 !i113 1
-R32
-R33
+R29
+R30
 vdesign_1
-Z45 !s10a 1760767005
-!s110 1760767051
+R1
 !i10b 1
 !s100 4AZ4ieHdEd8@>LViMHJRK1
 R2
 I7I9Xh3^<7GFC?c[BX<Y:71
 R3
 R0
-w1760767005
+Z42 w1761036747
 8../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v
 F../../../../Activation_accelerator.ip_user_files/bd/design_1/sim/design_1.v
-!i122 29
+!i122 7
 L0 14 85
 R4
 r1
 !s85 0
 31
-!s108 1760767051.000000
+R5
 R6
 R7
 !i113 1
@@ -329,7 +323,6 @@ R8
 R9
 R10
 vdesign_1_accumulator_0_0
-!s10a 1760668791
 R1
 !i10b 1
 !s100 iI:glWbzU?XIIME^YoA::2
@@ -354,19 +347,18 @@ R8
 R9
 R10
 vdesign_1_divide_0_0
-!s10a 1760672274
 R1
 !i10b 1
-!s100 1;lETTnaLAQFzblPL?6I20
+!s100 OGlEU8_m5A?Wad3Bjb27O3
 R2
-I1LzRTM@aUDkmAXVgHUAFM2
+IK?z7PD4=z9Hd[IAFE37JX0
 R3
 R0
-w1760672274
+R42
 8../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_divide_0_0/sim/design_1_divide_0_0.v
 F../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_divide_0_0/sim/design_1_divide_0_0.v
 !i122 7
-Z46 L0 57 44
+Z43 L0 57 44
 R4
 r1
 !s85 0
@@ -379,7 +371,6 @@ R8
 R9
 R10
 vdesign_1_expv2_0_0
-R45
 R1
 !i10b 1
 !s100 5^93ZFWiBkzfMi:I;zP5G2
@@ -387,7 +378,7 @@ R2
 I75z_mT34kKF6gLWGhZ[0j0
 R3
 R0
-w1760759953
+w1761035668
 8../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_expv2_0_0/sim/design_1_expv2_0_0.v
 F../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_expv2_0_0/sim/design_1_expv2_0_0.v
 !i122 7
@@ -404,7 +395,6 @@ R8
 R9
 R10
 vdesign_1_max_0_0
-!s10a 1760536639
 R1
 !i10b 1
 !s100 gLL;g[8KkU7]8M8YLB=eG0
@@ -416,7 +406,7 @@ w1760536639
 8../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v
 F../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_max_0_0/sim/design_1_max_0_0.v
 !i122 7
-R46
+R43
 R4
 r1
 !s85 0
@@ -429,7 +419,6 @@ R8
 R9
 R10
 vdesign_1_sub_max_0_0
-!s10a 1760615414
 R1
 !i10b 1
 !s100 IC__zN@JPYX;aHCkFEfka1
@@ -441,7 +430,7 @@ w1760615414
 8../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v
 F../../../../Activation_accelerator.ip_user_files/bd/design_1/ip/design_1_sub_max_0_0/sim/design_1_sub_max_0_0.v
 !i122 7
-R46
+R43
 R4
 r1
 !s85 0
@@ -454,7 +443,6 @@ R8
 R9
 R10
 vdesign_1_wrapper
-R45
 R1
 !i10b 1
 !s100 1Ofbm`6a6aFSD:gd4SUf82
@@ -462,7 +450,7 @@ R2
 IfQ:Ee<zJWT__S`OEI90m53
 R3
 R0
-w1760759990
+R42
 8../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 F../../../../Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 !i122 7
@@ -479,15 +467,14 @@ R8
 R9
 R10
 vdivide
-!s10a 1760672240
 R1
 !i10b 1
-!s100 0KMLlA9TBMjh?9n@9f^D40
+!s100 chTQJFijj7UXlYhY9;CJm1
 R2
-I3iBNNUeFePQc8cfk6zBO30
+IKLd^O7J>Nn6HV59M4_?]_1
 R3
 R0
-w1760672240
+w1761036740
 8../../../../Activation_accelerator.srcs/sources_1/new/divide.v
 F../../../../Activation_accelerator.srcs/sources_1/new/divide.v
 !i122 7
@@ -504,15 +491,14 @@ R8
 R9
 R10
 vexp_from_uv
-!s10a 1760759010
 R1
 !i10b 1
-!s100 ^GEX=AH<mhhEkPeD>7?PQ3
+!s100 ORWzBNU@SNiB1_QhLLcXg0
 R2
-In4ML;i^Gk`ZK5^G^0zUHo3
+I7^8Tlo77C5oZ[?X;6`L6z2
 R3
 R0
-w1760759010
+w1761027277
 8../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v
 F../../../../Activation_accelerator.srcs/sources_1/new/exp_from_uv.v
 !i122 7
@@ -529,15 +515,14 @@ R8
 R9
 R10
 vexpv2
-!s10a 1760759897
 R1
 !i10b 1
-!s100 SMQL72Fb`VDkIKNNRZj?D3
+!s100 nlWP97iO0][;OGN5:lMjZ2
 R2
-IASHZgX7g[`5`EWzQ;c?jL2
+IBKSSU>dGZ;H;Xk`Lzk;Q42
 R3
 R0
-w1760759897
+w1761035646
 8../../../../Activation_accelerator.srcs/sources_1/new/expv2.v
 F../../../../Activation_accelerator.srcs/sources_1/new/expv2.v
 !i122 7
@@ -554,7 +539,6 @@ R8
 R9
 R10
 vfloating_point_0
-!s10a 1760535089
 R11
 !i10b 1
 !s100 Z7`?c<@]QdnTo?IHF>eUY3
@@ -566,12 +550,12 @@ w1760535089
 8../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v
 F../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v
 !i122 2
-Z47 L0 56 156
+Z44 L0 56 156
 R4
 r1
 !s85 0
 31
-R12
+R5
 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v|
 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_0/sim/floating_point_0.v|
 !i113 1
@@ -579,8 +563,7 @@ R8
 R9
 R10
 vfloating_point_1
-!s10a 1760614955
-R1
+R11
 !i10b 1
 !s100 QY?^W[j:GMe8JK_CNm_n32
 R2
@@ -591,20 +574,20 @@ w1760614955
 8../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v
 F../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v
 !i122 5
-R47
+R44
 R4
 r1
 !s85 0
 31
-R12
-!s107 ../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v|
-!s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v|
+R5
+Z45 !s107 ../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v|
+Z46 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v|
 !i113 1
 R8
 R9
 R10
 vfloating_point_2
-R15
+R11
 !i10b 1
 !s100 @3^<?dN3>K_MfJSLMmLVP3
 R2
@@ -614,33 +597,32 @@ R0
 w1760844269
 8../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v
 F../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v
-!i122 65
+!i122 5
 L0 56 151
 R4
 r1
 !s85 0
 31
-R16
-!s107 ../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v|
-!s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_2/sim/floating_point_2.v|../../../../Activation_accelerator.gen/sources_1/ip/floating_point_1/sim/floating_point_1.v|
+R5
+R45
+R46
 !i113 1
 R8
 R9
 R10
 vfloating_point_3
-!s10a 1760670489
 R1
 !i10b 1
-!s100 DibVNK<;Y3M0So7Y_8GNg1
+!s100 POB?m=1fk>]?a?;FfEi`_2
 R2
-IlO_<4XaB0hAzgl?UKP2j@3
+I=Rk56IM3^N]e>R=BfbTR03
 R3
 R0
-w1760670489
+w1761035238
 8../../../../Activation_accelerator.gen/sources_1/ip/floating_point_3/sim/floating_point_3.v
 F../../../../Activation_accelerator.gen/sources_1/ip/floating_point_3/sim/floating_point_3.v
 !i122 7
-R47
+R44
 R4
 r1
 !s85 0
@@ -653,15 +635,14 @@ R8
 R9
 R10
 vfloating_point_fixed
-!s10a 1760757710
 R1
 !i10b 1
-!s100 RAR:7hF?nU;imC>TbBMDU0
+!s100 _W;zj`^ZmQI<_R0<Rf;Q20
 R2
-I_ah:dW9c1l:=KPzf4A41@2
+Id`9Wb`Z39YkDR?R<`jCJH3
 R3
 R0
-w1760757710
+w1761035334
 8../../../../Activation_accelerator.gen/sources_1/ip/floating_point_fixed/sim/floating_point_fixed.v
 F../../../../Activation_accelerator.gen/sources_1/ip/floating_point_fixed/sim/floating_point_fixed.v
 !i122 7
@@ -677,8 +658,31 @@ R7
 R8
 R9
 R10
+vfloating_point_mul16
+R1
+!i10b 1
+!s100 [Ba0XHlCJ>;Uec]^MeY041
+R2
+IbLNJ0;7GkM_Ha60EPA>J12
+R3
+R0
+w1761036664
+8../../../../Activation_accelerator.gen/sources_1/ip/floating_point_mul16/sim/floating_point_mul16.v
+F../../../../Activation_accelerator.gen/sources_1/ip/floating_point_mul16/sim/floating_point_mul16.v
+!i122 7
+R44
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+R10
 vgen_tlast
-!s10a 1760613559
 R1
 !i10b 1
 !s100 bo^0KG316NIGX]TVOVcg;3
@@ -703,8 +707,7 @@ R8
 R9
 R10
 vget_maxof8
-!s10a 1760064640
-Z48 !s110 1760760040
+R25
 !i10b 1
 !s100 AF1VVg_LHi>n=P^o4o_`E2
 R2
@@ -720,15 +723,15 @@ R4
 r1
 !s85 0
 31
-Z49 !s108 1760760040.000000
-Z50 !s107 ../../../../Activation_accelerator.srcs/sources_1/new/max.v|../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v|../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v|
-Z51 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v|../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v|../../../../Activation_accelerator.srcs/sources_1/new/max.v|
+R26
+Z47 !s107 ../../../../Activation_accelerator.srcs/sources_1/new/max.v|../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v|../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v|
+Z48 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../Activation_accelerator.ip_user_files/ipstatic/hdl|../../../../Activation_accelerator.srcs/sources_1/new/get_maxof8.v|../../../../Activation_accelerator.srcs/sources_1/new/serial_max.v|../../../../Activation_accelerator.srcs/sources_1/new/max.v|
 !i113 1
 R8
 R9
 R10
 vglbl
-R15
+R1
 !i10b 1
 !s100 ZHmTNm_h3dd`6mIQLzSUN3
 R2
@@ -738,20 +741,19 @@ R0
 w1724786425
 8glbl.v
 Fglbl.v
-!i122 68
+!i122 8
 L0 6 78
 R4
 r1
 !s85 0
 31
-R16
+!s108 1761036898.000000
 !s107 glbl.v|
 !s90 -work|xil_defaultlib|glbl.v|
 !i113 1
 o-work xil_defaultlib
 R10
 vlatency4_fifo
-!s10a 1760669798
 R1
 !i10b 1
 !s100 VUTOZ:zHd9l2kMa?=0n6M1
@@ -776,8 +778,7 @@ R8
 R9
 R10
 vmax
-!s10a 1760534936
-R48
+R25
 !i10b 1
 !s100 4iClJo3eC6d5Z^I8:3AGo3
 R2
@@ -793,15 +794,14 @@ R4
 r1
 !s85 0
 31
-R49
-R50
-R51
+R26
+R47
+R48
 !i113 1
 R8
 R9
 R10
 vreciprocal
-Z52 !s10a 1760668337
 R1
 !i10b 1
 !s100 nQY>ma`61M?GT^:E1G9zn3
@@ -809,7 +809,7 @@ R2
 Il_c7`o3dgmNb]dinZMYAZ1
 R3
 R0
-Z53 w1760668337
+Z49 w1760668337
 8../../../../Activation_accelerator.srcs/sources_1/new/reciprocal.v
 F../../../../Activation_accelerator.srcs/sources_1/new/reciprocal.v
 !i122 7
@@ -826,7 +826,6 @@ R8
 R9
 R10
 vreciprocal_lut
-R52
 R1
 !i10b 1
 !s100 75PYeeG:58T><zRXjf8o=1
@@ -834,7 +833,7 @@ R2
 INkZSQQ]J1E36V;^QaWjLa2
 R3
 R0
-R53
+R49
 8../../../../Activation_accelerator.srcs/sources_1/new/reciprocal_lut.v
 F../../../../Activation_accelerator.srcs/sources_1/new/reciprocal_lut.v
 !i122 7
@@ -851,8 +850,7 @@ R8
 R9
 R10
 vserial_max
-!s10a 1760622193
-R48
+R25
 !i10b 1
 !s100 QK5WW0DXa5zSQ9HBQEoe^3
 R2
@@ -868,15 +866,14 @@ R4
 r1
 !s85 0
 31
-R49
-R50
-R51
+R26
+R47
+R48
 !i113 1
 R8
 R9
 R10
 vsub_max
-!s10a 1760615362
 R11
 !i10b 1
 !s100 lze:6<j]e_K?b[HQlEh@40
@@ -893,9 +890,9 @@ R4
 r1
 !s85 0
 31
+R5
 R12
 R13
-R14
 !i113 1
 R8
 R9

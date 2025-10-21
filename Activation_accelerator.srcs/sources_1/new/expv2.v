@@ -47,7 +47,7 @@ module expv2#(
     generate
         for(i=0; i<ParallelNum; i=i+1) begin:exp_inst
 
-            wire [15:0] tdata_mul2fixed;
+            wire [31:0] tdata_mul2fixed;
             wire tvalid_mul2fixed;
             wire tready_mul2fixed;
             wire unused;
@@ -58,11 +58,11 @@ module expv2#(
 
             .s_axis_a_tvalid(S_AXIS_TVALID),            // input wire s_axis_a_tvalid
             .s_axis_a_tready(exp_ready[i]),            // output wire s_axis_a_tready
-            .s_axis_a_tdata(S_AXIS_TDATA[16*i+15:16*i]),              // input wire [15 : 0] s_axis_a_tdata
+            .s_axis_a_tdata({S_AXIS_TDATA[16*i+15:16*i], 16'b0}),              // input wire [31 : 0] s_axis_a_tdata
 
             .s_axis_b_tvalid(1'b1),            // input wire s_axis_b_tvalid
             .s_axis_b_tready(unused),            // output wire s_axis_b_tready
-            .s_axis_b_tdata(16'h3FB9),              // input wire [15 : 0] s_axis_b_tdata
+            .s_axis_b_tdata(32'h3FB8AA3B),              // input wire [31 : 0] s_axis_b_tdata
 
             .m_axis_result_tvalid(tvalid_mul2fixed),  // output wire m_axis_result_tvalid
             .m_axis_result_tready(tready_mul2fixed),  // input wire m_axis_result_tready

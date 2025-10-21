@@ -57,11 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath /home/anderson/intelFPGA/20.1/modelsim_ase/bin
-set_param power.BramSDPPropagationFix 1
-set_param power.enableLutRouteBelPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -80,11 +75,19 @@ set_property ip_output_repo /home/anderson/vivado/project/Activation_accelerator
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2.dcp
+set_property used_in_implementation false [get_files /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_2/floating_point_2.dcp]
+add_files -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/c_shift_ram_1.dcp
+set_property used_in_implementation false [get_files /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_1/c_shift_ram_1.dcp]
+add_files -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_mul16/floating_point_mul16.dcp
+set_property used_in_implementation false [get_files /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_mul16/floating_point_mul16.dcp]
 read_verilog -library xil_defaultlib /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_max_0_0/design_1_max_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_sub_max_0_0/design_1_sub_max_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_add8_0_0/design_1_add8_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_accumulator_0_0/design_1_accumulator_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/design_1_expv2_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_0/c_shift_ram_0.xci
@@ -98,6 +101,15 @@ set_property used_in_implementation false [get_files -all /home/anderson/vivado/
 
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_1/floating_point_1.xci
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_1/floating_point_1_ooc.xdc]
+
+read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_2/c_shift_ram_2.xci
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/c_shift_ram_2/c_shift_ram_2_ooc.xdc]
+
+read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_3/floating_point_3.xci
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3_ooc.xdc]
+
+read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_fixed/floating_point_fixed.xci
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_fixed/floating_point_fixed_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

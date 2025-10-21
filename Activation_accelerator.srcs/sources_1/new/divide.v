@@ -89,7 +89,7 @@ module divide(
     generate
 
         for(i=0;i<8;i=i+1) begin : mul
-            floating_point_3 your_instance_name (
+            floating_point_mul16 mul16 (
             .aclk(aclk),                                  // input wire aclk
             .aresetn(arstn),                            // input wire aresetn
 

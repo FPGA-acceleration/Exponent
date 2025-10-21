@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sat Oct 18 13:57:23 2025
+| Date         : Tue Oct 21 16:35:04 2025
 | Host         : Legion running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file design_1_expv2_0_0_utilization_synth.rpt -pb design_1_expv2_0_0_utilization_synth.pb
 | Design       : design_1_expv2_0_0
@@ -157,13 +157,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  248 |                 CLB |
+| LUT6     |  224 |                 CLB |
 | FDCE     |  136 |            Register |
 | MUXF7    |   80 |                 CLB |
 | MUXF8    |   40 |                 CLB |
-| LUT3     |   32 |                 CLB |
-| LUT2     |   16 |                 CLB |
-| LUT5     |   10 |                 CLB |
+| LUT3     |   40 |                 CLB |
+| LUT5     |   34 |                 CLB |
+| LUT2     |    8 |                 CLB |
 | LUT4     |    2 |                 CLB |
 | LUT1     |    1 |                 CLB |
 +----------+------+---------------------+

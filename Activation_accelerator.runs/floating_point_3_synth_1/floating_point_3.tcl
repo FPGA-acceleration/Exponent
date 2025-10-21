@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "floating_point_3_synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath /home/anderson/intelFPGA/20.1/modelsim_ase/bin
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }

@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "design_1_accumulator_0_0_synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath /home/anderson/intelFPGA/20.1/modelsim_ase/bin
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/mref
@@ -69,6 +68,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.cache/wt [current_project]
 set_property parent.project_path /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.xpr [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]

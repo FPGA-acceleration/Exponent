@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Fri Oct 17 11:38:27 2025
+// Date        : Tue Oct 21 19:44:32 2025
 // Host        : Legion running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0_sim_netlist.v
@@ -25,12 +25,12 @@ module design_1_divide_0_0
     M_AXIS_TDATA,
     M_AXIS_TVALID,
     M_AXIS_TREADY);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF M_AXIS:S_AXIS, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_aclk, INSERT_VIP 0" *) input aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF M_AXIS:S_AXIS, FREQ_HZ 333333333, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_aclk, INSERT_VIP 0" *) input aclk;
   input arstn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 18, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *) input [143:0]S_AXIS_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 18, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 333333333, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *) input [143:0]S_AXIS_TDATA;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) input S_AXIS_TVALID;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output S_AXIS_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [127:0]M_AXIS_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 333333333, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [127:0]M_AXIS_TDATA;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output M_AXIS_TVALID;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input M_AXIS_TREADY;
 
@@ -120,10 +120,10 @@ module design_1_divide_0_0_divide
         .arstn_0(latency4_fifo_u_n_2),
         .ready(ready),
         .s_axis_a_tvalid(tvalid_latency));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3 \mul[0].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16 \mul[0].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[15:0]),
@@ -135,10 +135,10 @@ module design_1_divide_0_0_divide
         .s_axis_b_tdata(tdata_reciprocal),
         .s_axis_b_tready(b_ready[0]),
         .s_axis_b_tvalid(tvalid_reciprocal));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3 \mul[1].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16 \mul[1].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[31:16]),
@@ -150,10 +150,10 @@ module design_1_divide_0_0_divide
         .s_axis_b_tdata(tdata_reciprocal),
         .s_axis_b_tready(b_ready[1]),
         .s_axis_b_tvalid(tvalid_reciprocal));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3 \mul[2].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16 \mul[2].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[47:32]),
@@ -165,10 +165,10 @@ module design_1_divide_0_0_divide
         .s_axis_b_tdata(tdata_reciprocal),
         .s_axis_b_tready(b_ready[2]),
         .s_axis_b_tvalid(tvalid_reciprocal));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3 \mul[3].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16 \mul[3].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[63:48]),
@@ -180,10 +180,10 @@ module design_1_divide_0_0_divide
         .s_axis_b_tdata(tdata_reciprocal),
         .s_axis_b_tready(b_ready[3]),
         .s_axis_b_tvalid(tvalid_reciprocal));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3 \mul[4].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16 \mul[4].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[79:64]),
@@ -195,10 +195,10 @@ module design_1_divide_0_0_divide
         .s_axis_b_tdata(tdata_reciprocal),
         .s_axis_b_tready(b_ready[4]),
         .s_axis_b_tvalid(tvalid_reciprocal));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3 \mul[5].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16 \mul[5].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[95:80]),
@@ -210,10 +210,10 @@ module design_1_divide_0_0_divide
         .s_axis_b_tdata(tdata_reciprocal),
         .s_axis_b_tready(b_ready[5]),
         .s_axis_b_tvalid(tvalid_reciprocal));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3 \mul[6].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16 \mul[6].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[111:96]),
@@ -225,10 +225,10 @@ module design_1_divide_0_0_divide
         .s_axis_b_tdata(tdata_reciprocal),
         .s_axis_b_tready(b_ready[6]),
         .s_axis_b_tvalid(tvalid_reciprocal));
-  (* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) 
+  (* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-  design_1_divide_0_0_floating_point_3_HD1 \mul[7].your_instance_name 
+  design_1_divide_0_0_floating_point_mul16_HD1 \mul[7].mul16 
        (.aclk(aclk),
         .aresetn(arstn),
         .m_axis_result_tdata(M_AXIS_TDATA[127:112]),
@@ -251,9 +251,9 @@ module design_1_divide_0_0_divide
         .tvalid_reciprocal(tvalid_reciprocal));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "floating_point_3" *) 
+(* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "floating_point_mul16" *) 
 (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-module design_1_divide_0_0_floating_point_3
+module design_1_divide_0_0_floating_point_mul16
    (aclk,
     aresetn,
     s_axis_a_tvalid,
@@ -281,9 +281,9 @@ module design_1_divide_0_0_floating_point_3
 
 endmodule
 
-(* CHECK_LICENSE_TYPE = "floating_point_3,floating_point_v7_1_19,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "floating_point_3" *) 
+(* CHECK_LICENSE_TYPE = "floating_point_mul16,floating_point_v7_1_19,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "floating_point_mul16" *) 
 (* X_CORE_INFO = "floating_point_v7_1_19,Vivado 2024.2" *) 
-module design_1_divide_0_0_floating_point_3_HD1
+module design_1_divide_0_0_floating_point_mul16_HD1
    (aclk,
     aresetn,
     m_axis_result_tready,
@@ -4028,7 +4028,7 @@ module design_1_divide_0_0_reciprocal
         .I4(\pipe_data[1][13]_i_3_n_0 ),
         .I5(p_0_in_0[0]),
         .O(\pipe_data[1][13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \pipe_data[1][13]_i_2 
@@ -4053,7 +4053,6 @@ module design_1_divide_0_0_reciprocal
         .I4(\pipe_data[1][14]_i_3_n_0 ),
         .I5(\pipe_data[1][14]_i_4_n_0 ),
         .O(\pipe_data[1][14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hE000)) 
     \pipe_data[1][14]_i_2 
@@ -4062,7 +4061,7 @@ module design_1_divide_0_0_reciprocal
         .I2(p_0_in_0[1]),
         .I3(p_0_in_0[0]),
         .O(\pipe_data[1][14]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \pipe_data[1][14]_i_3 
@@ -4070,7 +4069,6 @@ module design_1_divide_0_0_reciprocal
         .I1(p_0_in_0[3]),
         .I2(p_0_in_0[2]),
         .O(\pipe_data[1][14]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h01FF)) 
     \pipe_data[1][14]_i_4 
@@ -4303,7 +4301,7 @@ module design_1_divide_0_0_reciprocal
         .I2(\pipe_data_reg_n_0_[1][0] ),
         .I3(\pipe_data_reg_n_0_[1][1] ),
         .O(\pipe_data[2][6]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \pipe_data[2][6]_i_5 
@@ -4312,7 +4310,7 @@ module design_1_divide_0_0_reciprocal
         .I2(s2_exp[0]),
         .I3(s2_exp[1]),
         .O(\pipe_data[2][6]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \pipe_data[2][6]_i_6 
@@ -4740,7 +4738,7 @@ module design_1_divide_0_0_reciprocal
         .I2(p_3_in),
         .I3(\pipe_valid_reg_n_0_[1] ),
         .O(\pipe_valid[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hBA)) 
     \pipe_valid[2]_i_1 
@@ -4748,7 +4746,7 @@ module design_1_divide_0_0_reciprocal
         .I1(p_3_in),
         .I2(\pipe_valid_reg_n_0_[2] ),
         .O(\pipe_valid[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \pipe_valid[3]_i_1 

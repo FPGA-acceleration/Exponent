@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Fri Oct 17 11:38:27 2025
+-- Date        : Tue Oct 21 19:44:33 2025
 -- Host        : Legion running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0_sim_netlist.vhdl
@@ -4563,18 +4563,16 @@ architecture STRUCTURE of design_1_divide_0_0_reciprocal is
   signal s2_exp : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^tvalid_reciprocal\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \pipe_data[1][13]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \pipe_data[1][14]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \pipe_data[1][14]_i_3\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \pipe_data[1][14]_i_4\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \pipe_data[1][13]_i_2\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \pipe_data[1][14]_i_3\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \pipe_data[1][7]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \pipe_data[1][8]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \pipe_data[2][6]_i_5\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \pipe_data[2][6]_i_6\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \pipe_data[2][6]_i_5\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \pipe_data[2][6]_i_6\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \pipe_valid[0]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \pipe_valid[1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \pipe_valid[2]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \pipe_valid[3]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \pipe_valid[2]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \pipe_valid[3]_i_1\ : label is "soft_lutpair6";
 begin
   tvalid_reciprocal <= \^tvalid_reciprocal\;
 S_AXIS_TREADY_INST_0_i_2: unisim.vcomponents.LUT6
@@ -5877,7 +5875,7 @@ entity design_1_divide_0_0_divide is
 end design_1_divide_0_0_divide;
 
 architecture STRUCTURE of design_1_divide_0_0_divide is
-  component design_1_divide_0_0_floating_point_3 is
+  component design_1_divide_0_0_floating_point_mul16 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -5891,8 +5889,8 @@ architecture STRUCTURE of design_1_divide_0_0_divide is
     m_axis_result_tready : in STD_LOGIC;
     m_axis_result_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  end component design_1_divide_0_0_floating_point_3;
-  component design_1_divide_0_0_floating_point_3_HD1 is
+  end component design_1_divide_0_0_floating_point_mul16;
+  component design_1_divide_0_0_floating_point_mul16_HD1 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -5906,7 +5904,7 @@ architecture STRUCTURE of design_1_divide_0_0_divide is
     s_axis_a_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_axis_b_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  end component design_1_divide_0_0_floating_point_3_HD1;
+  end component design_1_divide_0_0_floating_point_mul16_HD1;
   signal M_AXIS_TVALID_INST_0_i_1_n_0 : STD_LOGIC;
   signal a_ready : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal b_ready : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -5918,32 +5916,32 @@ architecture STRUCTURE of design_1_divide_0_0_divide is
   signal tvalid_latency : STD_LOGIC;
   signal tvalid_reciprocal : STD_LOGIC;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of \mul[0].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
+  attribute CHECK_LICENSE_TYPE of \mul[0].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of \mul[0].your_instance_name\ : label is "yes";
+  attribute DowngradeIPIdentifiedWarnings of \mul[0].mul16\ : label is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of \mul[0].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
-  attribute CHECK_LICENSE_TYPE of \mul[1].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
-  attribute DowngradeIPIdentifiedWarnings of \mul[1].your_instance_name\ : label is "yes";
-  attribute X_CORE_INFO of \mul[1].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
-  attribute CHECK_LICENSE_TYPE of \mul[2].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
-  attribute DowngradeIPIdentifiedWarnings of \mul[2].your_instance_name\ : label is "yes";
-  attribute X_CORE_INFO of \mul[2].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
-  attribute CHECK_LICENSE_TYPE of \mul[3].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
-  attribute DowngradeIPIdentifiedWarnings of \mul[3].your_instance_name\ : label is "yes";
-  attribute X_CORE_INFO of \mul[3].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
-  attribute CHECK_LICENSE_TYPE of \mul[4].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
-  attribute DowngradeIPIdentifiedWarnings of \mul[4].your_instance_name\ : label is "yes";
-  attribute X_CORE_INFO of \mul[4].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
-  attribute CHECK_LICENSE_TYPE of \mul[5].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
-  attribute DowngradeIPIdentifiedWarnings of \mul[5].your_instance_name\ : label is "yes";
-  attribute X_CORE_INFO of \mul[5].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
-  attribute CHECK_LICENSE_TYPE of \mul[6].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
-  attribute DowngradeIPIdentifiedWarnings of \mul[6].your_instance_name\ : label is "yes";
-  attribute X_CORE_INFO of \mul[6].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
-  attribute CHECK_LICENSE_TYPE of \mul[7].your_instance_name\ : label is "floating_point_3,floating_point_v7_1_19,{}";
-  attribute DowngradeIPIdentifiedWarnings of \mul[7].your_instance_name\ : label is "yes";
-  attribute X_CORE_INFO of \mul[7].your_instance_name\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute X_CORE_INFO of \mul[0].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute CHECK_LICENSE_TYPE of \mul[1].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
+  attribute DowngradeIPIdentifiedWarnings of \mul[1].mul16\ : label is "yes";
+  attribute X_CORE_INFO of \mul[1].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute CHECK_LICENSE_TYPE of \mul[2].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
+  attribute DowngradeIPIdentifiedWarnings of \mul[2].mul16\ : label is "yes";
+  attribute X_CORE_INFO of \mul[2].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute CHECK_LICENSE_TYPE of \mul[3].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
+  attribute DowngradeIPIdentifiedWarnings of \mul[3].mul16\ : label is "yes";
+  attribute X_CORE_INFO of \mul[3].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute CHECK_LICENSE_TYPE of \mul[4].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
+  attribute DowngradeIPIdentifiedWarnings of \mul[4].mul16\ : label is "yes";
+  attribute X_CORE_INFO of \mul[4].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute CHECK_LICENSE_TYPE of \mul[5].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
+  attribute DowngradeIPIdentifiedWarnings of \mul[5].mul16\ : label is "yes";
+  attribute X_CORE_INFO of \mul[5].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute CHECK_LICENSE_TYPE of \mul[6].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
+  attribute DowngradeIPIdentifiedWarnings of \mul[6].mul16\ : label is "yes";
+  attribute X_CORE_INFO of \mul[6].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
+  attribute CHECK_LICENSE_TYPE of \mul[7].mul16\ : label is "floating_point_mul16,floating_point_v7_1_19,{}";
+  attribute DowngradeIPIdentifiedWarnings of \mul[7].mul16\ : label is "yes";
+  attribute X_CORE_INFO of \mul[7].mul16\ : label is "floating_point_v7_1_19,Vivado 2024.2";
 begin
 M_AXIS_TVALID_INST_0: unisim.vcomponents.LUT5
     generic map(
@@ -5981,7 +5979,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       ready(0) => ready(1),
       s_axis_a_tvalid => tvalid_latency
     );
-\mul[0].your_instance_name\: component design_1_divide_0_0_floating_point_3
+\mul[0].mul16\: component design_1_divide_0_0_floating_point_mul16
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -5995,7 +5993,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       s_axis_b_tready => b_ready(0),
       s_axis_b_tvalid => tvalid_reciprocal
     );
-\mul[1].your_instance_name\: component design_1_divide_0_0_floating_point_3
+\mul[1].mul16\: component design_1_divide_0_0_floating_point_mul16
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -6009,7 +6007,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       s_axis_b_tready => b_ready(1),
       s_axis_b_tvalid => tvalid_reciprocal
     );
-\mul[2].your_instance_name\: component design_1_divide_0_0_floating_point_3
+\mul[2].mul16\: component design_1_divide_0_0_floating_point_mul16
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -6023,7 +6021,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       s_axis_b_tready => b_ready(2),
       s_axis_b_tvalid => tvalid_reciprocal
     );
-\mul[3].your_instance_name\: component design_1_divide_0_0_floating_point_3
+\mul[3].mul16\: component design_1_divide_0_0_floating_point_mul16
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -6037,7 +6035,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       s_axis_b_tready => b_ready(3),
       s_axis_b_tvalid => tvalid_reciprocal
     );
-\mul[4].your_instance_name\: component design_1_divide_0_0_floating_point_3
+\mul[4].mul16\: component design_1_divide_0_0_floating_point_mul16
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -6051,7 +6049,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       s_axis_b_tready => b_ready(4),
       s_axis_b_tvalid => tvalid_reciprocal
     );
-\mul[5].your_instance_name\: component design_1_divide_0_0_floating_point_3
+\mul[5].mul16\: component design_1_divide_0_0_floating_point_mul16
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -6065,7 +6063,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       s_axis_b_tready => b_ready(5),
       s_axis_b_tvalid => tvalid_reciprocal
     );
-\mul[6].your_instance_name\: component design_1_divide_0_0_floating_point_3
+\mul[6].mul16\: component design_1_divide_0_0_floating_point_mul16
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -6079,7 +6077,7 @@ latency4_fifo_u: entity work.design_1_divide_0_0_latency4_fifo
       s_axis_b_tready => b_ready(6),
       s_axis_b_tvalid => tvalid_reciprocal
     );
-\mul[7].your_instance_name\: component design_1_divide_0_0_floating_point_3_HD1
+\mul[7].mul16\: component design_1_divide_0_0_floating_point_mul16_HD1
      port map (
       aclk => aclk,
       aresetn => arstn,
@@ -6142,13 +6140,13 @@ architecture STRUCTURE of design_1_divide_0_0 is
   attribute X_INTERFACE_MODE : string;
   attribute X_INTERFACE_MODE of aclk : signal is "slave";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF M_AXIS:S_AXIS, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_aclk, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF M_AXIS:S_AXIS, FREQ_HZ 333333333, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_aclk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of M_AXIS_TDATA : signal is "xilinx.com:interface:axis:1.0 M_AXIS TDATA";
   attribute X_INTERFACE_MODE of M_AXIS_TDATA : signal is "master";
-  attribute X_INTERFACE_PARAMETER of M_AXIS_TDATA : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of M_AXIS_TDATA : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 333333333, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of S_AXIS_TDATA : signal is "xilinx.com:interface:axis:1.0 S_AXIS TDATA";
   attribute X_INTERFACE_MODE of S_AXIS_TDATA : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of S_AXIS_TDATA : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 18, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of S_AXIS_TDATA : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 18, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 333333333, PHASE 0.0, CLK_DOMAIN design_1_aclk, LAYERED_METADATA undef, INSERT_VIP 0";
 begin
 inst: entity work.design_1_divide_0_0_divide
      port map (

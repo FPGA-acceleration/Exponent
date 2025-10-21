@@ -3,6 +3,15 @@
 
 # XDC: new/clk.xdc
 
+# IP: ip/floating_point_2/floating_point_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_2 || ORIG_REF_NAME==floating_point_2} -quiet] -quiet
+
+# IP: ip/c_shift_ram_1/c_shift_ram_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_shift_ram_1 || ORIG_REF_NAME==c_shift_ram_1} -quiet] -quiet
+
+# IP: ip/floating_point_mul16/floating_point_mul16.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_mul16 || ORIG_REF_NAME==floating_point_mul16} -quiet] -quiet
+
 # Block Designs: bd/design_1/design_1.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
@@ -21,16 +30,34 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_po
 # IP: ip/axis_combiner_0/axis_combiner_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==axis_combiner_0 || ORIG_REF_NAME==axis_combiner_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_exp_0_0/design_1_exp_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_exp_0_0 || ORIG_REF_NAME==design_1_exp_0_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_accumulator_0_0/design_1_accumulator_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_accumulator_0_0 || ORIG_REF_NAME==design_1_accumulator_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_add8_0_0/design_1_add8_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_add8_0_0 || ORIG_REF_NAME==design_1_add8_0_0} -quiet] -quiet
+# IP: ip/c_shift_ram_2/c_shift_ram_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_shift_ram_2 || ORIG_REF_NAME==c_shift_ram_2} -quiet] -quiet
 
 # IP: ip/floating_point_1/floating_point_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_1 || ORIG_REF_NAME==floating_point_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_gen_tlast_0_0/design_1_gen_tlast_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_gen_tlast_0_0 || ORIG_REF_NAME==design_1_gen_tlast_0_0} -quiet] -quiet
+# IP: ip/floating_point_2/floating_point_2.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_2 || ORIG_REF_NAME==floating_point_2} -quiet] -quiet
+
+# IP: ip/c_shift_ram_1/c_shift_ram_1.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_shift_ram_1 || ORIG_REF_NAME==c_shift_ram_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_divide_0_0 || ORIG_REF_NAME==design_1_divide_0_0} -quiet] -quiet
+
+# IP: ip/floating_point_mul16/floating_point_mul16.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_mul16 || ORIG_REF_NAME==floating_point_mul16} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_expv2_0_0/design_1_expv2_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_expv2_0_0 || ORIG_REF_NAME==design_1_expv2_0_0} -quiet] -quiet
+
+# IP: ip/floating_point_fixed/floating_point_fixed.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_fixed || ORIG_REF_NAME==floating_point_fixed} -quiet] -quiet
+
+# IP: ip/floating_point_3/floating_point_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_3 || ORIG_REF_NAME==floating_point_3} -quiet] -quiet
 
 # XDC: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/design_1_ooc.xdc

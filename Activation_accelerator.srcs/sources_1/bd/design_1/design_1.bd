@@ -1061,8 +1061,8 @@
           "max/aclk",
           "sub_max/aclk",
           "accumulator/aclk",
-          "divide_0/aclk",
-          "expv2/aclk"
+          "expv2/aclk",
+          "divide_0/aclk"
         ]
       },
       "arstn_0_1": {
@@ -1071,8 +1071,8 @@
           "max/arstn",
           "sub_max/arstn",
           "accumulator/arstn",
-          "divide_0/arstn",
-          "expv2/arstn"
+          "expv2/arstn",
+          "divide_0/arstn"
         ]
       }
     }

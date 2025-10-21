@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "design_1_divide_0_0_synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath /home/anderson/intelFPGA/20.1/modelsim_ase/bin
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/mref
@@ -85,8 +84,8 @@ read_verilog -library xil_defaultlib {
   /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/reciprocal_lut.v
   /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/new/divide.v
 }
-read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_3/floating_point_3.xci
-set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_3/floating_point_3_ooc.xdc]
+read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_mul16/floating_point_mul16.xci
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/ip/floating_point_mul16/floating_point_mul16_ooc.xdc]
 
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0.xci
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0_ooc.xdc]

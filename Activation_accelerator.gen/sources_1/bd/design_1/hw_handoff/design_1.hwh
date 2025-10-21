@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct 18 13:56:45 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 21 16:52:27 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:kv260_som_som240_1_connector_kv260_carrier_som240_1_connector:part0:1.4" DEVICE="xck26" NAME="design_1" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -39,8 +39,8 @@
         <CONNECTION INSTANCE="max" PORT="aclk"/>
         <CONNECTION INSTANCE="sub_max" PORT="aclk"/>
         <CONNECTION INSTANCE="accumulator" PORT="aclk"/>
-        <CONNECTION INSTANCE="divide_0" PORT="aclk"/>
         <CONNECTION INSTANCE="expv2" PORT="aclk"/>
+        <CONNECTION INSTANCE="divide_0" PORT="aclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="arstn" SIGIS="undef" SIGNAME="External_Ports_arstn">
@@ -48,8 +48,8 @@
         <CONNECTION INSTANCE="max" PORT="arstn"/>
         <CONNECTION INSTANCE="sub_max" PORT="arstn"/>
         <CONNECTION INSTANCE="accumulator" PORT="arstn"/>
-        <CONNECTION INSTANCE="divide_0" PORT="arstn"/>
         <CONNECTION INSTANCE="expv2" PORT="arstn"/>
+        <CONNECTION INSTANCE="divide_0" PORT="arstn"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>

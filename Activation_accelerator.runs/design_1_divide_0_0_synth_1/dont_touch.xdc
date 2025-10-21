@@ -4,8 +4,8 @@
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0.xci
 # IP: The module: 'design_1_divide_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_3/floating_point_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_3 || ORIG_REF_NAME==floating_point_3} -quiet] -quiet
+# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_mul16/floating_point_mul16.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_mul16 || ORIG_REF_NAME==floating_point_mul16} -quiet] -quiet
 
 # XDC: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'design_1_divide_0_0'. Do not add the DONT_TOUCH constraint.
@@ -14,8 +14,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells inst -quiet] -quiet
 # IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0.xci
 # IP: The module: 'design_1_divide_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_3/floating_point_3.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_3 || ORIG_REF_NAME==floating_point_3} -quiet] -quiet
+# IP: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/floating_point_mul16/floating_point_mul16.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==floating_point_mul16 || ORIG_REF_NAME==floating_point_mul16} -quiet] -quiet
 
 # XDC: /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'design_1_divide_0_0'. Do not add the DONT_TOUCH constraint.
