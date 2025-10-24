@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="315"></ZoomStartTime>
+      <ZoomEndTime time="1,081"></ZoomEndTime>
+      <Cursor1Time time="596"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="554"></NameColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="design_1_i/axi_dma_0_M_AXIS_MM2S_TDATA">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/axi_dma_0_M_AXIS_MM2S_TDATA[127:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TDATA[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/axi_dma_0_M_AXIS_MM2S_TKEEP">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/axi_dma_0_M_AXIS_MM2S_TKEEP[15:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TKEEP[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/axi_dma_0_M_AXIS_MM2S_TLAST">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/axi_dma_0_M_AXIS_MM2S_TLAST</obj_property>
+      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/axi_dma_0_M_AXIS_MM2S_TREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/axi_dma_0_M_AXIS_MM2S_TREADY</obj_property>
+      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/axi_dma_0_M_AXIS_MM2S_TVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/axi_dma_0_M_AXIS_MM2S_TVALID</obj_property>
+      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

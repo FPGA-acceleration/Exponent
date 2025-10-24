@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Oct 21 19:44:44 2025
-# Process ID         : 5442
+# Start of session at: Wed Oct 22 18:13:23 2025
+# Process ID         : 156672
 # Current directory  : /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1
 # Command line       : vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file           : /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/design_1_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 22.04.5 LTS
 # Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
-# CPU Frequency      : 1445.913 MHz
+# CPU Frequency      : 3798.716 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 16
 # Host memory        : 16546 MB
 # Swap memory        : 10000 MB
 # Total Virtual      : 26546 MB
-# Available Virtual  : 22955 MB
+# Available Virtual  : 18832 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -37,39 +37,85 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5738
+INFO: [Synth 8-7075] Helper process launched with PID 156770
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2465.355 ; gain = 119.688 ; free physical = 6779 ; free virtual = 20251
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2542.801 ; gain = 118.688 ; free physical = 5332 ; free virtual = 16100
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_accumulator_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_accumulator_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_accumulator_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_accumulator_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'M_AXIS_TLAST' of module 'design_1_accumulator_0_0' is unconnected for instance 'accumulator' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:53]
-WARNING: [Synth 8-7023] instance 'accumulator' of module 'design_1_accumulator_0_0' has 9 connections declared, but only 8 given [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_1_divide_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_divide_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_divide_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_divide_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_expv2_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_expv2_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_expv2_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_expv2_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_max_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_max_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_max_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_max_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_sub_max_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_sub_max_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_sub_max_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-5442-Legion/realtime/design_1_sub_max_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_accumulator_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_accumulator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_accumulator_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_accumulator_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M_AXIS_TLAST' of module 'design_1_accumulator_0_0' is unconnected for instance 'accumulator' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:175]
+WARNING: [Synth 8-7023] instance 'accumulator' of module 'design_1_accumulator_0_0' has 9 connections declared, but only 8 given [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:175]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:184]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:184]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 40 connections declared, but only 38 given [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:184]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_1_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_dma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_1_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_dma_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:223]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:223]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:223]
+WARNING: [Synth 8-7023] instance 'axi_dma_1' of module 'design_1_axi_dma_1_0' has 43 connections declared, but only 40 given [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:223]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_2' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_smc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_2' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_smc_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:264]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:264]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:264]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:264]
+WARNING: [Synth 8-7071] port 'M01_AXI_wstrb' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:264]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:264]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_2' has 79 connections declared, but only 73 given [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:264]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_1_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_1_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_divide_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_divide_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_divide_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_divide_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_expv2_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_expv2_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_expv2_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_expv2_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:425]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_ila_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:436]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_1_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_ila_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_1_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_ila_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_max_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_max_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_max_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_max_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_299M_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_rst_ps8_0_299M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_299M_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_rst_ps8_0_299M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_299M_0' is unconnected for instance 'rst_ps8_0_299M' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:456]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_299M_0' is unconnected for instance 'rst_ps8_0_299M' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:456]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_299M_0' is unconnected for instance 'rst_ps8_0_299M' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:456]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_299M_0' is unconnected for instance 'rst_ps8_0_299M' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:456]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_299M' of module 'design_1_rst_ps8_0_299M_0' has 10 connections declared, but only 6 given [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:456]
+INFO: [Synth 8-6157] synthesizing module 'design_1_sub_max_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_sub_max_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_sub_max_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_sub_max_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/.Xil/Vivado-156672-Legion/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'saxigp0_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:472]
+WARNING: [Synth 8-7071] port 'saxigp0_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:472]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 82 connections declared, but only 80 given [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:472]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'max'. This will prevent further optimization [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:447]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:425]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:184]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_1'. This will prevent further optimization [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:223]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:436]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'divide_0'. This will prevent further optimization [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/synth/design_1.v:407]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2538.324 ; gain = 192.656 ; free physical = 6436 ; free virtual = 19918
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2623.770 ; gain = 199.656 ; free physical = 5320 ; free virtual = 16086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2538.324 ; gain = 192.656 ; free physical = 6455 ; free virtual = 19936
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2629.707 ; gain = 205.594 ; free physical = 5320 ; free virtual = 16086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2538.324 ; gain = 192.656 ; free physical = 6455 ; free virtual = 19936
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2629.707 ; gain = 205.594 ; free physical = 5320 ; free virtual = 16086
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2538.324 ; gain = 0.000 ; free physical = 6454 ; free virtual = 19935
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2629.707 ; gain = 0.000 ; free physical = 5320 ; free virtual = 16088
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -84,23 +130,35 @@ Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activatio
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0/design_1_divide_0_0_in_context.xdc] for cell 'design_1_i/divide_0'
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/design_1_expv2_0_0/design_1_expv2_0_0_in_context.xdc] for cell 'design_1_i/expv2'
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/design_1_expv2_0_0/design_1_expv2_0_0_in_context.xdc] for cell 'design_1_i/expv2'
-Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/constrs_1/new/clk.xdc]
-Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/constrs_1/new/clk.xdc]
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_0'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_0'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_299M'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_299M'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/design_1_axi_smc_1_0/design_1_axi_smc_1_0_in_context.xdc] for cell 'design_1_i/axi_smc_1'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/design_1_axi_smc_1_0/design_1_axi_smc_1_0_in_context.xdc] for cell 'design_1_i/axi_smc_1'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2/design_1_axi_smc_2_in_context.xdc] for cell 'design_1_i/axi_smc'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2/design_1_axi_smc_2_in_context.xdc] for cell 'design_1_i/axi_smc'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0/design_1_axi_dma_1_0_in_context.xdc] for cell 'design_1_i/axi_dma_1'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0/design_1_axi_dma_1_0_in_context.xdc] for cell 'design_1_i/axi_dma_1'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_1'
+Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_1'
 Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2585.977 ; gain = 0.000 ; free physical = 6749 ; free virtual = 20234
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2681.602 ; gain = 0.000 ; free physical = 5364 ; free virtual = 16127
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2585.977 ; gain = 0.000 ; free physical = 6748 ; free virtual = 20234
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/max' at clock pin 'aclk' is different from the actual clock period '3.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/sub_max' at clock pin 'aclk' is different from the actual clock period '3.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2681.602 ; gain = 0.000 ; free physical = 5364 ; free virtual = 16127
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2585.977 ; gain = 240.309 ; free physical = 6752 ; free virtual = 20238
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2681.602 ; gain = 257.488 ; free physical = 5389 ; free virtual = 16155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -108,7 +166,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2593.980 ; gain = 248.312 ; free physical = 6752 ; free virtual = 20238
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2689.605 ; gain = 265.492 ; free physical = 5389 ; free virtual = 16155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -119,11 +177,19 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/sub_max. (constraint f
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/accumulator. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/divide_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/expv2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps8_0_299M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ila_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2593.980 ; gain = 248.312 ; free physical = 6752 ; free virtual = 20238
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2689.605 ; gain = 265.492 ; free physical = 5389 ; free virtual = 16155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2593.980 ; gain = 248.312 ; free physical = 6752 ; free virtual = 20239
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2689.605 ; gain = 265.492 ; free physical = 5389 ; free virtual = 16156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -146,25 +212,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2593.980 ; gain = 248.312 ; free physical = 6750 ; free virtual = 20241
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2689.605 ; gain = 265.492 ; free physical = 5394 ; free virtual = 16163
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3242.648 ; gain = 896.980 ; free physical = 6189 ; free virtual = 19679
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3324.305 ; gain = 900.191 ; free physical = 4869 ; free virtual = 15639
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3242.648 ; gain = 896.980 ; free physical = 6189 ; free virtual = 19679
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3324.305 ; gain = 900.191 ; free physical = 4869 ; free virtual = 15639
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3252.664 ; gain = 906.996 ; free physical = 6181 ; free virtual = 19672
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3336.312 ; gain = 912.199 ; free physical = 4862 ; free virtual = 15632
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -182,90 +248,100 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19532
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4725 ; free virtual = 15495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19532
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4725 ; free virtual = 15495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19532
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4725 ; free virtual = 15495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19532
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4725 ; free virtual = 15495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19532
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4725 ; free virtual = 15495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19532
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4725 ; free virtual = 15495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+-------------------------+----------+
-|      |BlackBox name            |Instances |
-+------+-------------------------+----------+
-|1     |design_1_accumulator_0_0 |         1|
-|2     |design_1_divide_0_0      |         1|
-|3     |design_1_expv2_0_0       |         1|
-|4     |design_1_max_0_0         |         1|
-|5     |design_1_sub_max_0_0     |         1|
-+------+-------------------------+----------+
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |design_1_accumulator_0_0     |         1|
+|2     |design_1_axi_dma_0_0         |         1|
+|3     |design_1_axi_dma_1_0         |         1|
+|4     |design_1_axi_smc_2           |         1|
+|5     |design_1_axi_smc_1_0         |         1|
+|6     |design_1_divide_0_0          |         1|
+|7     |design_1_expv2_0_0           |         1|
+|8     |design_1_ila_0_0             |         1|
+|9     |design_1_ila_1_0             |         1|
+|10    |design_1_max_0_0             |         1|
+|11    |design_1_rst_ps8_0_299M_0    |         1|
+|12    |design_1_sub_max_0_0         |         1|
+|13    |design_1_zynq_ultra_ps_e_0_0 |         1|
++------+-----------------------------+----------+
 
 Report Cell Usage: 
-+------+-----------------------+------+
-|      |Cell                   |Count |
-+------+-----------------------+------+
-|1     |design_1_accumulator_0 |     1|
-|2     |design_1_divide_0      |     1|
-|3     |design_1_expv2_0       |     1|
-|4     |design_1_max_0         |     1|
-|5     |design_1_sub_max_0     |     1|
-|6     |IBUF                   |   132|
-|7     |OBUF                   |   130|
-+------+-----------------------+------+
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |design_1_accumulator_0     |     1|
+|2     |design_1_axi_dma_0         |     1|
+|3     |design_1_axi_dma_1         |     1|
+|4     |design_1_axi_smc_1         |     1|
+|5     |design_1_axi_smc           |     1|
+|6     |design_1_divide_0          |     1|
+|7     |design_1_expv2_0           |     1|
+|8     |design_1_ila_0             |     1|
+|9     |design_1_ila_1             |     1|
+|10    |design_1_max_0             |     1|
+|11    |design_1_rst_ps8_0_299M    |     1|
+|12    |design_1_sub_max_0         |     1|
+|13    |design_1_zynq_ultra_ps_e_0 |     1|
++------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19532
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4725 ; free virtual = 15495
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3422.477 ; gain = 1029.156 ; free physical = 6042 ; free virtual = 19533
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3422.477 ; gain = 1076.809 ; free physical = 6042 ; free virtual = 19533
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3502.125 ; gain = 1026.117 ; free physical = 4727 ; free virtual = 15497
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3502.125 ; gain = 1078.012 ; free physical = 4727 ; free virtual = 15497
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3422.477 ; gain = 0.000 ; free physical = 6208 ; free virtual = 19699
-INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3502.125 ; gain = 0.000 ; free physical = 4898 ; free virtual = 15668
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3422.477 ; gain = 0.000 ; free physical = 6208 ; free virtual = 19699
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3502.125 ; gain = 0.000 ; free physical = 4900 ; free virtual = 15670
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 132 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 132 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: d2ce91a6
+Synth Design complete | Checksum: eff82424
 INFO: [Common 17-83] Releasing license: Synthesis
-38 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+58 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 3422.477 ; gain = 1940.535 ; free physical = 6208 ; free virtual = 19699
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2773.631; main = 2546.493; forked = 269.256
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4320.480; main = 3395.668; forked = 924.812
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3422.477 ; gain = 0.000 ; free physical = 6208 ; free virtual = 19699
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 3502.125 ; gain = 2054.246 ; free physical = 4885 ; free virtual = 15655
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2836.895; main = 2617.133; forked = 262.377
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4399.129; main = 3474.316; forked = 924.812
 INFO: [Common 17-1381] The checkpoint '/home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 21 19:45:16 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 22 18:13:57 2025...

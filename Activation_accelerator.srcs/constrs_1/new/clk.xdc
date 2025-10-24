@@ -1,1 +1,0 @@
-create_clock -name aclk -period 3.000 [get_ports aclk]

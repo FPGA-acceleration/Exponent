@@ -57,6 +57,9 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath /home/anderson/intelFPGA/20.1/modelsim_ase/bin
+set_param tcl.collectionResultDisplayLimit 0
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -66,7 +69,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.cache/wt [current_project]
 set_property parent.project_path /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
@@ -88,6 +91,84 @@ set_property used_in_implementation false [get_files -all /home/anderson/vivado/
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_accumulator_0_0/design_1_accumulator_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_divide_0_0/design_1_divide_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_expv2_0_0/design_1_expv2_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/bd_a878_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/bd_a878_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/bd_a878_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/bd_a878_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_4/bd_a878_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_5/bd_a878_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_6/bd_a878_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_10/bd_a878_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_11/bd_a878_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_12/bd_a878_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_16/bd_a878_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_17/bd_a878_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_18/bd_a878_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_19/bd_a878_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_20/bd_a878_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_21/bd_a878_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_22/bd_a878_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_23/bd_a878_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_24/bd_a878_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_25/bd_a878_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_2/bd_6e42_arinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_3/bd_6e42_rinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_4/bd_6e42_awinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_5/bd_6e42_winsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_6/bd_6e42_binsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_7/bd_6e42_aroutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_8/bd_6e42_routsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_9/bd_6e42_awoutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_10/bd_6e42_woutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_11/bd_6e42_boutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_12/bd_6e42_arni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_13/bd_6e42_rni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_14/bd_6e42_awni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_15/bd_6e42_wni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_16/bd_6e42_bni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_20/bd_6e42_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_21/bd_6e42_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_22/bd_6e42_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_23/bd_6e42_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_24/bd_6e42_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_25/bd_6e42_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_26/bd_6e42_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_27/bd_6e42_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_28/bd_6e42_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_29/bd_6e42_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_30/bd_6e42_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_31/bd_6e42_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_33/bd_6e42_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_34/bd_6e42_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_35/bd_6e42_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_36/bd_6e42_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_37/bd_6e42_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_38/bd_6e42_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_1_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 read_ip -quiet /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/sources_1/ip/c_shift_ram_0/c_shift_ram_0.xci
@@ -120,9 +201,6 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/constrs_1/new/clk.xdc
-set_property used_in_implementation false [get_files /home/anderson/vivado/project/Activation_accelerator/Activation_accelerator.srcs/constrs_1/new/clk.xdc]
-
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

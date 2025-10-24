@@ -1,32 +1,46 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.959088",
-   "Default View_TopLeft":"-100,-292",
+   "Default View_ScaleFactor":"1.10668",
+   "Default View_TopLeft":"975,-40",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port S_AXIS -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port M_AXIS -pg 1 -lvl 6 -x 1300 -y 160 -defaultsOSRD
-preplace port port-id_aclk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port port-id_arstn -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace inst max -pg 1 -lvl 1 -x 150 -y 80 -defaultsOSRD
-preplace inst sub_max -pg 1 -lvl 2 -x 400 -y 100 -defaultsOSRD
-preplace inst accumulator -pg 1 -lvl 4 -x 900 -y 140 -defaultsOSRD
-preplace inst divide_0 -pg 1 -lvl 5 -x 1160 -y 160 -defaultsOSRD
-preplace inst expv2 -pg 1 -lvl 3 -x 650 -y 120 -defaultsOSRD
-preplace netloc aclk_0_1 1 0 5 30 160 270 10 530 40 770 60 1020J
-preplace netloc arstn_0_1 1 0 5 20 170 280 20 520 30 780 220 1020J
-preplace netloc S_AXIS_0_1 1 0 1 NJ 60
-preplace netloc accumulator_M_AXIS 1 4 1 N 140
-preplace netloc divide_0_M_AXIS 1 5 1 N 160
-preplace netloc expv2_M_AXIS 1 3 1 N 120
-preplace netloc max_M_AXIS 1 1 1 N 80
-preplace netloc sub_max_M_AXIS 1 2 1 N 100
-levelinfo -pg 1 0 150 400 650 900 1160 1300
-pagesize -pg 1 -db -bbox -sgen -100 0 1510 300
+preplace inst max -pg 1 -lvl 7 -x 2550 -y 90 -defaultsOSRD
+preplace inst sub_max -pg 1 -lvl 8 -x 2800 -y 110 -defaultsOSRD
+preplace inst accumulator -pg 1 -lvl 10 -x 3300 -y 150 -defaultsOSRD
+preplace inst divide_0 -pg 1 -lvl 1 -x 210 -y 90 -defaultsOSRD
+preplace inst expv2 -pg 1 -lvl 9 -x 3050 -y 130 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 4 -x 1410 -y 120 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 6 -x 2220 -y 140 -defaultsOSRD
+preplace inst rst_ps8_0_299M -pg 1 -lvl 1 -x 210 -y 330 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 3 -x 950 -y 120 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 1880 -y 120 -defaultsOSRD
+preplace inst axi_dma_1 -pg 1 -lvl 2 -x 610 -y 330 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 7 -x 2550 -y 250 -defaultsOSRD
+preplace inst ila_1 -pg 1 -lvl 2 -x 610 -y 100 -defaultsOSRD
+preplace netloc axi_dma_0_mm2s_prmry_reset_out_n 1 0 10 40 170 380J 30 NJ 30 NJ 30 NJ 30 NJ 30 2420 170 2680 190 2930 210 3180J
+preplace netloc rst_ps8_0_299M_peripheral_aresetn 1 1 5 440 220 810 220 NJ 220 1750 220 2060
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 10 30 180 430 170 820 230 1120 230 1710 200 2050 50 2410 180 2670 200 2920 220 3170J
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 5 40 230 NJ 230 780J 240 NJ 240 1700
+preplace netloc accumulator_M_AXIS 1 0 11 40 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 3420
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 6 1 2430 70n
+preplace netloc axi_dma_0_M_AXI_MM2S 1 2 5 820 20 NJ 20 NJ 20 NJ 20 2380
+preplace netloc axi_dma_1_M_AXI_S2MM 1 2 1 770 110n
+preplace netloc axi_smc_1_M00_AXI 1 3 1 1080 100n
+preplace netloc axi_smc_M00_AXI 1 5 1 N 110
+preplace netloc axi_smc_M01_AXI 1 1 5 450 210 NJ 210 NJ 210 NJ 210 2010
+preplace netloc divide_0_M_AXIS 1 1 1 420 90n
+preplace netloc expv2_M_AXIS 1 9 1 N 130
+preplace netloc max_M_AXIS 1 7 1 N 90
+preplace netloc sub_max_M_AXIS 1 8 1 N 110
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 4 1 N 100
+levelinfo -pg 1 0 210 610 950 1410 1880 2220 2550 2800 3050 3300 3440
+pagesize -pg 1 -db -bbox -sgen 0 0 3440 460
 "
 }
 {
-   "da_clkrst_cnt":"2",
-   "da_zynq_ultra_ps_e_cnt":"1"
+   "da_axi4_cnt":"5",
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"3",
+   "da_zynq_ultra_ps_e_cnt":"2"
 }
